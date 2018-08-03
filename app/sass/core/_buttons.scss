@@ -50,3 +50,25 @@
     }
   }
 }
+.application-btn-footer{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: $medium;
+  color: $white;
+  border: 1px solid $gray-ce;
+  letter-spacing: 1.2px;
+  @media screen and (min-width: $w-tablet) {
+    width: 160px;
+    font-size: 9px;
+    line-height: 32px;
+  }
+  @media screen and (min-width: 960px) {
+    width: 100%;
+    font-size: 14px;
+    line-height: 48px;
+  }
+}

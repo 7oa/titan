@@ -3,4 +3,304 @@
   color: $white;
   width: 100%;
   background-color: $gray-41;
+  @media screen and (min-width: 960px) {
+    background-image: url('images/footer-bg.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  &__c1{
+    display: none;
+    @media screen and (min-width: 960px) {
+      display: block;
+      flex: 0 0 auto;
+      margin-top: 3px;
+      margin-right: 64px;
+    }
+  }
+  &__c2{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: 960px) {
+      width: 300px;
+      margin-right: 98px;
+      flex: 0 0 auto;
+    }
+  }
+  &__c3{
+    @media screen and (min-width: $w-tablet) {
+      padding-top: 5px;
+    }
+    @media screen and (min-width: 960px) {
+
+    }
+  }
+  &__logo{
+    @media screen and (min-width: 960px) {
+      width: 171px;
+      height: 177px;
+      background-image: url('images/logo-footer.png');
+    }
+  }
+  &__desktop-ss{
+    display: none;
+    @media screen and (min-width: 960px) {
+      display: block;
+    }
+  }
+  &__info{
+    display: none;
+    @media screen and (min-width: 960px) {
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: $medium;
+      width: 400px;
+      color: $gray-69;
+      flex: 0 0 auto;
+      margin-right: 240px;
+      padding-top: 6px;
+    }
+  }
+  &__tablet-application{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: 960px) {
+      display: none;
+    }
+  }
+  &__desktop-application{
+    display: none;
+    @media screen and (min-width: 960px) {
+      display: block;
+    }
+  }
+  &__application{
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+  }
+  &__line1{
+    border-bottom: 1px solid $gray-69;
+    padding-top: 43px;
+    padding-bottom: 22px;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 27px;
+      padding-bottom: 10px;
+    }
+    @media screen and (min-width: 960px) {
+      justify-content: flex-start;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+  &__line2{
+    padding-top: 17px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: 960px) {
+      justify-content: flex-start;
+      padding-top: 14px;
+    }
+  }
+  &__developers-link{
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-image: url('images/f5-logo@2x.png');
+    background-repeat: no-repeat;
+    background-size: 34px;
+    @media screen and (min-width: $w-tablet) {
+      background-image: none;
+      width: 110px;
+      height: 23px;
+    }
+    @media screen and (min-width: 960px) {
+      width: 250px;
+      height: 36px;
+      background-image: url('images/f5-logo@2x.png');
+      background-repeat: no-repeat;
+      background-size: 33px;
+      background-position-y: 3px;
+      padding-left: 60px;
+    }
+    span{
+      display: none;
+      @media screen and (min-width: $w-tablet) {
+        display: block;
+        text-transform: uppercase;
+        font-size: 8px;
+        line-height: 12px;
+        color: $gray-69;
+      }
+      @media screen and (min-width: 960px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+  &__contacts-line{
+    font-weight: $medium;
+    margin-bottom: 28px;
+    font-size: 14px;
+    padding-left: 32px;
+    background-repeat: no-repeat;
+    letter-spacing: 0.3px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 10px;
+      margin-bottom: 12px;
+      padding-left: 30px;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 14px;
+      line-height: 18px;
+      padding-left: 40px;
+    }
+    &_addr{
+      background-image: url('images/pin-gray@2x.png');
+      background-size: 13px 16px;
+      background-position-x: 1px;
+      @media screen and (min-width: $w-tablet) {
+        background-size: 9px 12px;
+      }
+      @media screen and (min-width: 960px) {
+        background-size: 12px 15px;
+      }
+    }
+    &_tel{
+      background-image: url('images/phone-gray@2x.png');
+      background-size: 10px 17px;
+      background-position-x: 3px;
+      @media screen and (min-width: $w-tablet) {
+        background-size: 7px 12px;
+      }
+      @media screen and (min-width: 960px) {
+        background-size: 9px 16px;
+      }
+    }
+    &_email{
+      background-image: url('images/email-gray@2x.png');
+      background-size: 19px 12px;
+      background-position-y: 2px;
+      @media screen and (min-width: $w-tablet) {
+        background-size: 13px 8px;
+      }
+      @media screen and (min-width: 960px) {
+        background-size: 18px 11px;
+      }
+    }
+    a{
+      color: $white;
+      display: block;
+      margin-bottom: 10px;
+      @media screen and (min-width: $w-tablet) {
+        margin-bottom: 4px;
+      }
+      @media screen and (min-width: 960px) {
+        margin-bottom: 0;
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__ss{
+    @media screen and (min-width: 960px) {
+      display: none;
+    }
+  }
+  &__menu{
+    @media screen and (min-width: 960px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__contacts{
+    @media screen and (min-width: 960px) {
+      margin-left: 10px;
+      margin-bottom: 26px;
+    }
+  }
+}
+.ss-list{
+  display: flex;
+}
+.ss-item{
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: $gray-69;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 21px;
+  font-size: 22px;
+  line-height: 35px;
+  color: $gray-41;
+  @media screen and (min-width: $w-tablet) {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  @media screen and (min-width: 960px) {
+    width: 33px;
+    height: 33px;
+    font-size: 22px;
+    line-height: 33px;
+  }
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
+.footer-menu{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+    width: 277px;
+  }
+  @media screen and (min-width: 960px) {
+    justify-content: space-between;
+    width: auto;
+  }
+  &__ul{
+    @media screen and (min-width: $w-tablet) {
+      @include uldev();
+      flex: 0 0 auto;
+      width: 150px;
+    }
+    @media screen and (min-width: 960px) {
+      flex: 0 0 auto;
+    }
+    &:first-of-type{
+      @media screen and (min-width: $w-tablet) {
+        width: 150px;
+      }
+      @media screen and (min-width: 960px) {
+        width: auto;
+      }
+    }
+  }
+  &__li{
+    @media screen and (min-width: $w-tablet) {
+
+    }
+    @media screen and (min-width: 960px) {
+      margin-bottom: 18px;
+    }
+  }
+  &__link{
+    @media screen and (min-width: $w-tablet) {
+      text-transform: uppercase;
+      font-size: 9px;
+      color: $white;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+    }
+  }
 }

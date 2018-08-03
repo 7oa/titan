@@ -2,6 +2,9 @@
 $(document).ready(function() {
     //клонируем из мобильной для адаптива
     $('.application-btn').clone().appendTo('.header__application');
+    $('.ss-list').clone().appendTo('.footer__desktop-ss');
+    $('.footer__application .application-btn-footer').clone().appendTo('.footer__tablet-application');
+    $('.footer__application .application-btn-footer').clone().appendTo('.footer__desktop-application');
 
     //кнопка бургер
     $('.js-menu-btn').click(function(){
