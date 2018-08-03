@@ -1,3 +1,27 @@
 header.header
-    .container
-        include ../blocks/_header-menu
+    ._container.container
+        ._logo
+            a._logo-img(href="/" style="background-image:url('images/logo@2x.png')")
+        ._menu
+            ._menu-bl.js-menu
+                button._menu-close.js-menu-close
+                ._menu-container
+                    include ../blocks/_header-menu
+                ._contacts-m
+                    .contacts-header
+                        .contacts-bl
+                            a.contact-line.contact-line_tel(href="tel:8182207485") (8182) 20-74-85
+                            a.contact-line.contact-line_email(href="mailto:office@tdevelop.ru") office@tdevelop.ru
+                        .contacts-bl
+                            .contact-line.contact-line_pin Архангельск
+                            .contact-line.contact-line_building Поморская, 7
+                ._application-m
+                    button.application-btn
+                        span Заявка
+                        span на аренду
+            ._menu-btn
+                .burger-icon.js-menu-btn
+                    - for (var i=0;i<=3;i++)
+                        span
+                ._menu-ttl меню
+        ._application

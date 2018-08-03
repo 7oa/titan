@@ -1,5 +1,184 @@
 .header {
-    background: $white;
-    height: 100px;
-    background: cadetblue;
+  background-color: $white;
+  height: 131px;
+  position: relative;
+  @media screen and (min-width: $w-tablet) {
+    background-color: $white;
+    height: 99px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    height: 95px;
+  }
+  &__logo{
+    @media screen and (min-width: $w-desktop) {
+      position: relative;
+      width: 289px;
+    }
+    @media screen and (min-width: $w-tablet) {
+      margin-left: 8px;
+      margin-right: 42px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-left: 0;
+      margin-right: 0;
+      flex: 0 0 auto;
+    }
+    &:before{
+      @media screen and (min-width: $w-desktop) {
+        content: '';
+        display: block;
+        width: 289px;
+        height: 180px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background-image: url('images/logo-bg.png');
+        @include bg-img(contain);
+      }
+    }
+  }
+  &__logo-img{
+    display: block;
+    @include bg-img(contain);
+    width: 92.5px;
+    height: 96px;
+    @media screen and (min-width: $w-tablet) {
+      width: 66.5px;
+      height: 69px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 153px;
+      height: 158px;
+      position: relative;
+      margin: 12px auto 0;
+    }
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 0;
+      justify-content: flex-start;
+    }
+  }
+  &__application{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      margin-top: 11px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-top: 21px;
+      flex: 0 0 auto;
+    }
+  }
+  &__application-m{
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+  }
+  &__contacts-m{
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+  }
+  &__menu{
+    @media screen and (min-width: $w-tablet) {
+      margin-top: 13px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-top: 43px;
+      flex: 1 1 auto;
+    }
+  }
+  &__menu-bl{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(35,31,32,0.9);
+    padding: 35px 30px;
+    z-index: 2;
+    @media screen and (min-width: $w-tablet) {
+      display: block !important;
+      background-color: transparent;
+      position: relative;
+      padding: 0;
+    }
+  }
+  &__menu-close{
+    position: absolute;
+    top: 38px;
+    right: 32px;
+    width: 34px;
+    height: 34px;
+    display: block;
+    background-image: url('images/close-white.png');
+    @include bg-img(contain);
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+  }
+  &__menu-btn{
+    margin-right: 11px;
+    margin-top: 28px;
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+  }
+  &__menu-ttl{
+    color: $bordo-a9;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: $extra-bold;
+    text-align: center;
+  }
+  &__menu-container{
+    margin-bottom: 34px;
+  }
+}
+.contacts-header{
+  margin-bottom: 39px;
+}
+.contacts-bl{
+  margin-bottom: 25px;
+}
+.contact-line{
+  margin-bottom: 12px;
+  padding-left: 35px;
+  display: block;
+  color: $gray-fe;
+  opacity: .7;
+  font-size: 16px;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: $extra-bold;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  letter-spacing: 2px;
+  &_tel{
+    background-image: url('images/phone-white.png');
+    background-position-x: 4px;
+    background-size: 10px 17px;
+  }
+  &_email{
+    background-image: url('images/email-white.png');
+    background-position-x: 0;
+    background-size: 19px 12px;
+  }
+  &_pin{
+    background-image: url('images/pin-white.png');
+    background-position-x: 2px;
+    background-size: 13px 16px;
+  }
+  &_building{
+    background-image: url('images/building-white.png');
+    background-position-x: 0;
+    background-size: 16px 17px;
+  }
 }

@@ -1,12 +1,109 @@
 .header-menu{
-  display: flex;
-  &__items{
-    margin-right: 10px;
+  @include uldev();
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+    flex-wrap: wrap;
   }
-  &__links{
-    color: $white;
-    &_active{
-      color: red;
+  &__items{
+    display: block;
+    margin-bottom: 27px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 6px;
+      margin-right: 12px;
+      position: relative;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 35px;
     }
   }
+  &__links{
+    color: $gray-fe;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: $extra-bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-tablet) {
+      color: $gray-23;
+      font-size: 12px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      letter-spacing: 1.5px;
+    }
+    &_parent{
+      &:after{
+        content: '';
+        background-image: url('images/drop-white.png');
+        width: 15px;
+        height: 9px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 15px 9px;
+        margin-left: 5px;
+        @media screen and (min-width: $w-tablet) {
+          background-image: url('images/drop-bordo.png');
+          width: 10px;
+          height: 6px;
+          background-size: 10px 6px;
+        }
+        @media screen and (min-width: $w-desktop) {
+          width: 14px;
+          height: 8px;
+          background-size: 14px 8px;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  &__child-w{
+    padding-top: 10px;
+    //display: none;
+    @media screen and (min-width: $w-tablet) {
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      background-color: $white;
+      width: 200px;
+      border: 1px solid $gray-ce;
+      box-shadow: $shadow-gray;
+      padding: 15px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 30px;
+      top: 39px;
+      width: 208px;
+    }
+  }
+  &__child{
+    @include uldev();
+  }
+  &__child-li{
+    margin-bottom: 5px;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 19px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &__child-a{
+    color: $gray-fe;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: $extra-bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-tablet) {
+      color: $bordo-a9;
+      font-size: 12px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+.angle-down{
+
 }

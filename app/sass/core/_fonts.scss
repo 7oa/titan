@@ -1,4 +1,9 @@
-@include font-face(OpenSans, "fonts/OpenSansRegular/OpenSans", normal);
+@include font-face(Lato, "fonts/Lato-Regular/Lato-Regular", $regular);
+@include font-face(Lato, "fonts/Lato-Medium/Lato-Medium", $medium);
+@include font-face(Gilroy, "fonts/Gilroy-Light/Gilroy-Light", $light);
+@include font-face(Gilroy, "fonts/Gilroy-ExtraBold/Gilroy-ExtraBold", $extra-bold);
+
+/*@include font-face(OpenSans, "fonts/OpenSansRegular/OpenSans", normal);
 @include font-face(OpenSans, "fonts/OpenSansItalic/OpenSans-Italic", normal, italic);
 @include font-face(OpenSans, "fonts/OpenSansBold/OpenSans-Bold", bold);
 @include font-face(OpenSans, "fonts/OpenSansBoldItalic/OpenSans-BoldItalic", bold, italic);
@@ -10,4 +15,4 @@
 @include font-face(OpenSansExtraBold, "fonts/OpenSansExtraBoldItalic/OpenSans-ExtraboldItalic", normal, italic);
 
 @include font-face(OpenSansSemiBold, "fonts/OpenSansSemiBold/OpenSans-Semibold", normal);
-@include font-face(OpenSansSemiBold, "fonts/OpenSansSemiBoldItalic/OpenSans-SemiboldItalic", normal, italic);
+@include font-face(OpenSansSemiBold, "fonts/OpenSansSemiBoldItalic/OpenSans-SemiboldItalic", normal, italic);*/

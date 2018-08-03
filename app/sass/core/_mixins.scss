@@ -54,37 +54,6 @@
   background-position: center center;
 }
 
-//Медиазапросы для разных разрешений. Указаны в em, чтобы в сафари при увеличения масштаба бреикпоинты срабатывали
-@mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (min-width: 70em) { @content ; }
-  }
-  @else if $point == laptop {
-    @media (min-width: 64em) { @content ; }
-  }
-  @else if $point == tablet {
-    @media (min-width: 50em) { @content ; }
-  }
-  @else if $point == phablet {
-    @media (min-width: 37.5em)  { @content ; }
-  }
-  @else if $point == mobileonly {
-    @media (max-width: 37.5em)  { @content ; }
-
-  }
-}
-//Пример брекпоинтов
-//.grid-1-4 {
-//  width: 100%;
-//  @include breakpoint(phablet) {
-//    width: 50%;
-//  }
-//  @include breakpoint(laptop) {
-//    width: 25%;
-//  }
-//}
-
-
 //Для браузер не поддерживающие свг, заменяем картинку на пнг, а в случаи с ретиной в 2 раза большьше по размеру
 //Нарезаем картинки
 //pattern.svg
@@ -140,7 +109,7 @@ $retina-suffix: '@2x';
 // Font Face
 // =============================================================================
 
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
   $src: null;
 
   $extmods: (

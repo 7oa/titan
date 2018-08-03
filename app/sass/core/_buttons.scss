@@ -1,0 +1,52 @@
+.application-btn{
+  border: 1px solid $white;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  line-height: 60px;
+  background-color: transparent;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: $extra-bold;
+  letter-spacing: 2px;
+  @media screen and (min-width: $w-tablet) {
+    color: $bordo-a9;
+    font-size: 8px;
+    background-image: url('images/app.png');
+    background-size: 54px 24px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    line-height: 11px;
+    padding-top: 30px;
+    height: 50px;
+    border: none;
+    width: 70px;
+    padding-left: 6px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    background-color: $bordo-a9;
+    color: $white;
+    line-height: 58px;
+    transition: .5s;
+    width: 249px;
+    background-image: none;
+    padding-top: 0;
+    height: 58px;
+    padding-left: 0;
+    font-size: 16px;
+  }
+  &:hover{
+    @media screen and (min-width: $w-desktop) {
+      background-color: $bordo-de;
+    }
+  }
+  span{
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: inline;
+    }
+  }
+}
