@@ -6,8 +6,9 @@ mixin navItem(url, name, parent, current)
         a.header-menu__links(class=name==current ? 'header-menu__links_active' : '',, class=parent=='y' ? 'header-menu__links_parent js-menu-link' : '', href=url, title=name)= name
         if parent == 'y'
             .header-menu__child-w.js-menu-child
-                ul.header-menu__child
-                    each item in child
-                        if item.parent == name
-                            li.header-menu__child-li
-                                a.header-menu__child-a(href=item.url)= item.name
+                .header-menu__child-cnt
+                    ul.header-menu__child
+                        each item in child
+                            if item.parent == name
+                                li.header-menu__child-li
+                                    a.header-menu__child-a(href=item.url)= item.name

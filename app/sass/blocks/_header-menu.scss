@@ -58,11 +58,20 @@
   }
   &__child-w{
     padding-top: 10px;
-    //display: none;
+    display: none;
     @media screen and (min-width: $w-tablet) {
       position: absolute;
-      top: 25px;
-      left: 0px;
+      top: 15px;
+      left: 0;
+      padding-top: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 24px;
+    }
+  }
+  &__child-cnt{
+    @media screen and (min-width: $w-tablet) {
+      position: relative;
       background-color: $white;
       width: 200px;
       border: 1px solid $gray-ce;
@@ -71,8 +80,22 @@
     }
     @media screen and (min-width: $w-desktop) {
       padding: 30px;
-      top: 39px;
       width: 208px;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: -9px;
+        left: 30px;
+        display: block;
+        background-color: $white;
+        border-top: 1px solid $gray-ce;
+        border-right: 1px solid $gray-ce;
+        transform: rotate(-45deg);
+      }
     }
   }
   &__child{
