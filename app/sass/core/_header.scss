@@ -4,16 +4,13 @@
   position: relative;
   @media screen and (min-width: $w-tablet) {
     background-color: $white;
-    height: 99px;
+    height: 125px;
   }
   @media screen and (min-width: $w-desktop) {
     height: 95px;
+    z-index: 2;
   }
   &__logo{
-    @media screen and (min-width: $w-desktop) {
-      position: relative;
-      width: 289px;
-    }
     @media screen and (min-width: $w-tablet) {
       margin-left: 8px;
       margin-right: 42px;
@@ -22,6 +19,8 @@
       margin-left: 0;
       margin-right: 0;
       flex: 0 0 auto;
+      position: relative;
+      width: 289px;
     }
     &:before{
       @media screen and (min-width: $w-desktop) {
@@ -44,8 +43,8 @@
     width: 92.5px;
     height: 96px;
     @media screen and (min-width: $w-tablet) {
-      width: 66.5px;
-      height: 69px;
+      width: 89px;
+      height: 92px;
     }
     @media screen and (min-width: $w-desktop) {
       width: 153px;
@@ -58,6 +57,9 @@
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
+    @media screen and (min-width: $w-tablet) {
+      padding-top: 14px;
+    }
     @media screen and (min-width: $w-desktop) {
       padding-top: 0;
       justify-content: flex-start;
@@ -67,7 +69,7 @@
     display: none;
     @media screen and (min-width: $w-tablet) {
       display: block;
-      margin-top: 11px;
+      margin-top: 16px;
     }
     @media screen and (min-width: $w-desktop) {
       margin-top: 21px;
@@ -86,7 +88,7 @@
   }
   &__menu{
     @media screen and (min-width: $w-tablet) {
-      margin-top: 13px;
+      margin-top: 25px;
     }
     @media screen and (min-width: $w-desktop) {
       margin-top: 43px;

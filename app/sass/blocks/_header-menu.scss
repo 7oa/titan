@@ -25,7 +25,8 @@
     text-transform: uppercase;
     @media screen and (min-width: $w-tablet) {
       color: $gray-23;
-      font-size: 12px;
+      font-size: 16px;
+
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
@@ -119,7 +120,7 @@
     text-transform: uppercase;
     @media screen and (min-width: $w-tablet) {
       color: $bordo-a9;
-      font-size: 12px;
+      font-size: 14px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;

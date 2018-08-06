@@ -1,0 +1,185 @@
+.slider-index-sm{
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 47px;
+  box-shadow: $shadow-gray;
+  @media screen and (min-width: $w-tablet) {
+    width: 275px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 460px;
+  }
+  &__item{
+    background-color: $white;
+  }
+  &__ttl{
+    color: $gray-41;
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: $extra-bold;
+    font-family: Gilroy, sans-serif;
+    &:after{
+      content: '';
+      display: block;
+      width: 145px;
+      height: 3px;
+      background-color: $bordo-a9;
+      margin-top: 13px;
+      margin-bottom: 17px;
+      @media screen and (min-width: $w-tablet) {
+        height: 1px;
+        width: 70px;
+        margin-top: 16px;
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        height: 3px;
+        width: 139px;
+        margin-bottom: 15px;
+      }
+    }
+    @media screen and (min-width: $w-tablet) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &__cnt{
+    padding: 25px 30px 90px;
+    @media screen and (min-width: $w-tablet) {
+      padding-bottom: 17px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 45px 46px 40px;
+    }
+  }
+  &__prev{
+    font-size: 15px;
+    line-height: 25px;
+    color: $gray-41;
+    font-weight: $medium;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      line-height: 31px;
+    }
+  }
+  &__img{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      @include bg-img(cover);
+      height: 210px;
+      width: 100%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 393px;
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    background-image: url('images/arr-bordo.png');
+    @include bg-img(cover);
+    bottom: 30px;
+    font-size: 0;
+    line-height: 0;
+    z-index: 1;
+    @media screen and (min-width: $w-tablet) {
+      width: 38px;
+      height: 38px;
+      background-color: $bordo-a9;
+      background-image: url('images/arrow.png');
+      background-size: 10px 17px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 60px;
+      height: 60px;
+      background-size: 21px 34px;
+      background-color: rgba(193,2,47,0.75);
+    }
+    &.slick-prev{
+      transform: rotate(180deg);
+      left: 40px;
+      @media screen and (min-width: $w-tablet) {
+        left: 0;
+        bottom: 39px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        bottom: 61px;
+      }
+    }
+    &.slick-next{
+      right: 40px;
+      @media screen and (min-width: $w-tablet) {
+        left: 0;
+        right: auto;
+        bottom: 0;
+      }
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    @include uldev();
+    @media screen and (min-width: $w-tablet) {
+      bottom: 15px;
+      padding-left: 38px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      bottom: 20px;
+      padding-left: 0;
+    }
+    button{
+      font-size: 0;
+      line-height: 0;
+      width: 7px;
+      height: 7px;
+      background-color: $bordo-a9;
+      border-radius: 50%;
+      margin: 10px;
+      transition: .5s;
+      border: 2px solid transparent;
+      @media screen and (min-width: $w-tablet) {
+        background-color: $white;
+        width: 5px;
+        height: 5px;
+        margin: 5px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        margin: 5px 10px;
+        border-width: 2px;
+      }
+    }
+    .slick-active{
+      button{
+        width: 12px;
+        height: 12px;
+        background-color: $white;
+        border-color: $bordo-a9;
+        @media screen and (min-width: $w-tablet) {
+          border-color: $white;
+          background-color: transparent;
+          width: 7px;
+          height: 7px;
+        }
+        @media screen and (min-width: $w-desktop) {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+}

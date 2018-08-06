@@ -23,4 +23,10 @@ $(document).ready(function() {
         $(this).next().slideToggle();
         return false;
     });
+
+    //слайдер на главной
+    $('.slider-index-sm').slick({
+        dots: true,
+        infinite: true,
+    });
 });
