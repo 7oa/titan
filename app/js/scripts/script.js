@@ -1,4 +1,8 @@
 // js jquery
+var isModile = !window.matchMedia('(min-width: 680px)').matches;
+$(window).on('load resize', function(){
+    isModile = !window.matchMedia('(min-width: 680px)').matches;
+});
 $(document).ready(function() {
     //клонируем из мобильной для адаптива
     $('.application-btn').clone().appendTo('.header__application');
@@ -27,6 +31,21 @@ $(document).ready(function() {
     //слайдер на главной
     $('.slider-index-sm').slick({
         dots: true,
-        infinite: true,
+        infinite: true
     });
+
+    //слайдер объектов
+    $('.obj-slider').slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 680,
+                settings: "unslick"
+            }
+        ]
+    });
+
 });

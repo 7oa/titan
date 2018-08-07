@@ -47,7 +47,34 @@ button{
     margin: 0 auto;
   }
 }
-.h{
+.bl-head{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: $w-desktop) {
+    justify-content: flex-start;
+  }
+  .bl-all{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+  }
+}
+.bl-footer{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  @media screen and (min-width: $w-tablet) {
+    display: none;
+  }
+  .bl-all{
+    display: inline-block;
+  }
+}
+.bl-ttl{
   font-family: Gilroy, sans-serif;
   font-weight: $extra-bold;
   font-size: 25px;
@@ -59,11 +86,13 @@ button{
   @media screen and (min-width: $w-desktop) {
     font-size: 30px;
     line-height: 30px;
+    width: 425px;
   }
   &:after{
     content: '';
     display: block;
-    margin-right: 24px;
+    margin-top: 18px;
+    margin-bottom: 20px;
     background-color: $bordo-a9;
     height: 2px;
     width: 135px;
@@ -73,5 +102,40 @@ button{
     @media screen and (min-width: $w-desktop) {
 
     }
+  }
+}
+.bl-all{
+  font-family: Lato, sans-serif;
+  font-weight: $medium;
+  font-size: 15px;
+  padding: 0 40px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: $white;
+  position: relative;
+  text-align: center;
+  @media screen and (min-width: $w-tablet) {
+    font-size: 10px;
+    line-height: 27px;
+    padding: 0 25px;
+    flex: 0 0 auto;
+    margin-right: 40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    margin-right: 0;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $bordo-a9;
+    transform: skew(-20deg);
+  }
+  span{
+    display: block;
+    position: relative;
   }
 }

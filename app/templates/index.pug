@@ -37,7 +37,7 @@ block content
 		.container
 			.index-bl2
 				._c1
-					._h.h Миссия компании
+					.bl-ttl Миссия компании
 					._prev.
 						Используя передовой российский и международный опыт в области консалтинга, строительства, управления недвижимостью, понимая перспективы развития города, команда высококвалифицированных специалистов нашей компании создает комфортные условия для Вашего бизнеса и полноценной жизни горожан.
 				._c2
@@ -56,13 +56,170 @@ block content
 								._count 6
 								._ttl офисных<br>центров
 			.index-bl3
-				.h Торговая недвижимость
+				.bl-head
+					.bl-ttl Торговая недвижимость
+					a.bl-all(href="#")
+						span Все торговые центры
+				.bl-body
+					.obj-slider
+						- for (var i=0;i<2;i++)
+							._slide
+								a._item(href="#")
+									._cnt
+										._img(style="background-image:url('images/tn1.png')")
+										._ttl ТРК «Титан-Арена»
+										._num 1/7
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
+							._slide
+								a._item(href="#")
+									._cnt
+										._img(style="background-image:url('images/tn2.png')")
+										._ttl Центральный универмаг
+										._num 2/7
+										._desctiption
+											._desctiption-bl.
+												Поморская, 9<br>
+												Открыт: 31 мая 2014
+											._desctiption-bl.
+												Торгововый центр<br>
+												4 этажа
+											._desctiption-bl.
+												Общая площадь:<br>
+												35 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												350 машиномест
+							._slide
+								a._item(href="#")
+									._cnt
+										._img(style="background-image:url('images/tn3.png')")
+										._ttl Магазин «Светлана»
+										._num 2/7
+										._desctiption
+											._desctiption-bl.
+												Поморская, 9<br>
+												Открыт: 31 мая 2014
+											._desctiption-bl.
+												Торгововый центр<br>
+												4 этажа
+											._desctiption-bl.
+												Общая площадь:<br>
+												35 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												350 машиномест
+				.bl-footer
+					a.bl-all(href="#")
+						span Все торговые центры
 			.index-bl4
-				.h Офисная недвижимость
+				.bl-head
+					.bl-ttl Офисная недвижимость
+					a.bl-all(href="#")
+						span Все офисные центры
+				.bl-body
+					.obj-slider
+						- for (var i=0;i<2;i++)
+							._slide
+								a._item(href="#")
+									._cnt
+										._img(style="background-image:url('images/of1.png')")
+										._ttl Бизнес-центр на Поморской, 7
+										._num 1/7
+										._desctiption
+											._desctiption-bl.
+												Поморская, 7<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Бизнес-центр,<br>
+												5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка: <br>
+												650 машиномест
+							._slide
+								a._item(href="#")
+									._cnt
+										._img(style="background-image:url('images/of2.png')")
+										._ttl Бизнес-центр на Поморской, 5
+										._num 2/7
+										._desctiption
+											._desctiption-bl.
+												Поморская, 5<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Бизнес-центр,<br>
+												4 этажа
+											._desctiption-bl.
+												Общая площадь:<br>
+												29 000 кв2
+											._desctiption-bl.
+												Парковка: <br>
+												650 машиномест
+				.bl-footer
+					a.bl-all(href="#")
+						span Все торговые центры
 			.index-bl5
-				div
-					.h Новости компании
-				div
-					.h Публикации в СМИ
-
+				.news-prev-bl
+					.bl-head
+						.bl-ttl Новости компании
+						a.bl-all(href="#")
+							span Все новости
+					.bl-body
+						.news-prev-list
+							.news-prev
+								a._img(href="#" style="background-image:url('https://picsum.photos/600')")
+									._date
+										._date-d 20
+										._date-m дек
+								._cnt
+									a._ttl(href="#") В бильярдном клубе «Аристократ» состоялся бильярдный турнир
+									._prev.
+										9 декабря на территории бильярдного клуба «Аристократ» в ТРК «Титан Арена» прошел бильярдный турнир по «комбинированной пирамиде».<br>
+										Здесь собрались поистине короли бильярда. По мнению участников и гостей турнира,
+									a._read-more(href="#") Читать полностью
+							.news-prev
+								a._img(href="#" style="background-image:url('https://picsum.photos/600')")
+									._date
+										._date-d 20
+										._date-m дек
+								._cnt
+									a._ttl(href="#") В бильярдном клубе «Аристократ» состоялся бильярдный турнир
+									._prev.
+										9 декабря на территории бильярдного клуба «Аристократ» в ТРК «Титан Арена» прошел бильярдный турнир по «комбинированной пирамиде».<br>
+										Здесь собрались поистине короли бильярда. По мнению участников и гостей турнира,
+									a._read-more(href="#") Читать полностью
+					.bl-footer
+						a.bl-all(href="#")
+							span Все новости
+				.news-prev-bl
+					.bl-head
+						.bl-ttl Публикации в СМИ
+						a.bl-all(href="#")
+							span Все публикации
+					.bl-body
+						.news-prev
+							a._img(href="#" style="background-image:url('https://picsum.photos/600')")
+								._date
+									._date-d 21
+									._date-m янв
+							._cnt
+								a._ttl(href="#") В бильярдном клубе «Аристократ» состоялся бильярдный турнир
+								._prev.
+									9 декабря на территории бильярдного клуба «Аристократ» в ТРК «Титан Арена» прошел бильярдный турнир по «комбинированной пирамиде».<br>
+									Здесь собрались поистине короли бильярда. По мнению участников и гостей турнира,
+								a._read-more(href="#") Читать полностью
 	//end workarea

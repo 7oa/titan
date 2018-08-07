@@ -195,7 +195,7 @@
   }
 }
 .index-bl2{
-  margin-bottom: 100px;
+  margin-bottom: 75px;
   @media screen and (min-width: $w-desktop) {
     display: flex;
     margin-bottom: 110px;
@@ -226,7 +226,7 @@
   }
 }
 .total-area{
-  margin-bottom: 40px;
+  margin-bottom: 44px;
   @media screen and (min-width: $w-tablet) {
     display: flex;
     align-items: center;
@@ -238,7 +238,7 @@
     color: $bordo-a9;
     font-size: 37px;
     height: 122px;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     font-weight: $extra-bold;
     font-family: Gilroy, sans-serif;
     display: flex;
@@ -303,7 +303,7 @@
     font-weight: $extra-bold;
     font-family: Gilroy, sans-serif;
     color: $bordo-a9;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
     @media screen and (min-width: $w-desktop) {
       font-size: 60px;
       line-height: 31px;
@@ -318,5 +318,114 @@
       font-size: 30px;
       line-height: 30px;
     }
+  }
+}
+.index-bl3{
+  margin-bottom: 90px;
+}
+.index-bl4{
+  margin-bottom: 90px;
+}
+.index-bl5{
+  margin-bottom: 80px;
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.news-prev-bl {
+  @media screen and (min-width: $w-desktop) {
+    width: 90%;
+  }
+  &:nth-child(n+2) {
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+}
+.news-prev-list{
+  margin-bottom: 15px;
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+  @media screen and (min-width: $w-tablet) {
+  }
+  &:after{
+    content: '';
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+
+  }
+}
+.news-prev{
+  min-width: 230px;
+  width: 48%;
+  flex: 0 0 auto;
+  margin-bottom: 15px;
+  @media screen and (min-width: $w-tablet) {
+    width: 48%;
+  }
+  &:nth-child(1){
+    margin-right: 20px;
+    @media screen and (min-width: $w-tablet) {
+      margin-right: 0;
+    }
+  }
+  &__img{
+    @include bg-img(cover);
+    display: block;
+    width: 100%;
+    height: 140px;
+    position: relative;
+    background-color: $gray-ce;
+    margin-bottom: 22px;
+  }
+  &__date{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 62px;
+    height: 62px;
+    color: $white;
+    text-align: center;
+    background-color: $bordo-a9;
+    padding-top: 12px;
+    box-sizing: border-box;
+  }
+  &__date-d{
+    font-size: 25px;
+    line-height: 25px;
+    font-family: Gilroy, sans-serif;
+    font-weight: $light;
+    margin-bottom: 4px;
+  }
+  &__date-m{
+    text-transform: uppercase;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  &__ttl{
+    font-size: 18px;
+    line-height: 23px;
+    color: $gray-41;
+    font-weight: $extra-bold;
+    font-family: Gilroy, sans-serif;
+    margin-bottom: 11px;
+    display: inline-block;
+  }
+  &__prev{
+    color: $gray-8c;
+    font-size: 14px;
+    line-height: 23px;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+  }
+  &__read-more{
+    display: none;
   }
 }
