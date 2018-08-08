@@ -98,7 +98,9 @@ button{
     height: 2px;
     width: 135px;
     @media screen and (min-width: $w-tablet) {
-
+      margin-top: 5px;
+      margin-bottom: 29px;
+      width: 120px;
     }
     @media screen and (min-width: $w-desktop) {
       margin-top: 23px;
@@ -124,6 +126,7 @@ button{
     padding: 0 25px;
     flex: 0 0 auto;
     margin-right: 40px;
+    margin-top: 12px;
   }
   @media screen and (min-width: $w-desktop) {
     margin-right: 0;
@@ -141,9 +144,20 @@ button{
     left: 0;
     background-color: $bordo-c1;
     transform: skew(-20deg);
+    transition: .5s;
   }
   span{
     display: block;
     position: relative;
+  }
+  &:hover{
+    &:before{
+      box-shadow: $shadow-bordo2;
+    }
+  }
+  &:active{
+    &:before{
+      background-color: $bordo-de;
+    }
   }
 }

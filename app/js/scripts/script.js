@@ -1,7 +1,41 @@
 // js jquery
 var isModile = !window.matchMedia('(min-width: 680px)').matches;
+
+//слайдер объектов
+function objSlider(){
+    if($('.obj-slider').length>0){
+        $('.obj-slider').each(function(){
+            var frame  = $(this);
+            var wrap   = frame.parent();
+
+            frame.sly({
+                horizontal: 1,
+                itemNav: 'basic',
+                smart: 1,
+                scrollBar: wrap.find('.sly-scrollbar'),
+                scrollBy: 0,
+                pagesBar: wrap.find('.sly-pages'),
+                activatePageOn: 'click',
+                speed: 300,
+                dragHandle: 1,
+                clickBar: 1,
+
+                prevPage: wrap.find('.prevPage'),
+                nextPage: wrap.find('.nextPage')
+            });
+        });
+    }
+}
 $(window).on('load resize', function(){
     isModile = !window.matchMedia('(min-width: 680px)').matches;
+    if($('.obj-slider').length>0){
+        objSlider();
+        $('.obj-slider').each(function(){
+            var frame  = $(this);
+            if(!isModile) frame.sly('reload');
+            else frame.sly(false);
+        });
+    }
 });
 $(document).ready(function() {
     //клонируем для адаптива
@@ -34,39 +68,7 @@ $(document).ready(function() {
         infinite: true
     });
 
-    //слайдер объектов
-    /*$('.obj-slider').slick({
-        dots: true,
-        infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 680,
-                settings: "unslick"
-            }
-        ]
-    });*/
-    $('.obj-slider').each(function(){
-        var frame  = $(this);
-        var wrap   = frame.parent();
-
-        frame.sly({
-            horizontal: 1,
-            itemNav: 'basic',
-            smart: 1,
-            scrollBar: wrap.find('.sly-scrollbar'),
-            scrollBy: 0,
-            pagesBar: wrap.find('.sly-pages'),
-            activatePageOn: 'click',
-            speed: 300,
-            dragHandle: 1,
-            clickBar: 1,
-
-            prevPage: wrap.find('.prevPage'),
-            nextPage: wrap.find('.nextPage')
-        });
-    });
+    objSlider();
 
 
 });

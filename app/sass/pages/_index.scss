@@ -5,6 +5,7 @@
   @media screen and (min-width: $w-tablet) {
     min-height: 345px;
     padding-top: 6px;
+    margin-bottom: 20px;
   }
   @media screen and (min-width: $w-desktop) {
     margin-bottom: 128px;
@@ -174,6 +175,7 @@
   }
   &__btn{
     display: none;
+    transition: .5s;
     @media screen and (min-width: $w-tablet) {
       display: block;
       width: 196px;
@@ -193,10 +195,16 @@
       width: 217px;
       height: 56px;
     }
+    &:hover{
+      box-shadow: $shadow-bordo;
+    }
   }
 }
 .index-bl2{
   margin-bottom: 75px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 55px;
+  }
   @media screen and (min-width: $w-desktop) {
     display: flex;
     margin-bottom: 78px;
@@ -361,18 +369,27 @@
 }
 .index-bl3{
   margin-bottom: 90px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 58px;
+  }
   @media screen and (min-width: $w-desktop) {
     margin-bottom: 96px;
   }
 }
 .index-bl4{
   margin-bottom: 90px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 58px;
+  }
   @media screen and (min-width: $w-desktop) {
     margin-bottom: 120px;
   }
 }
 .index-bl5{
   margin-bottom: 80px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 118px;
+  }
   @media screen and (min-width: $w-desktop) {
     display: flex;
     justify-content: space-between;
@@ -417,11 +434,11 @@
   margin-bottom: 15px;
   @media screen and (min-width: $w-tablet) {
     width: 48%;
+    margin-bottom: 0;
   }
   @media screen and (min-width: $w-desktop) {
     display: flex;
     width: 100%;
-    margin-bottom: 0;
   }
   &:nth-child(1){
     margin-right: 20px;
@@ -443,7 +460,8 @@
     background-color: $gray-ce;
     margin-bottom: 22px;
     @media screen and (min-width: $w-tablet) {
-      height: 315px;
+      height: 304px;
+      margin-bottom: 20px;
     }
     @media screen and (min-width: $w-desktop) {
       width: 220px;
@@ -519,6 +537,7 @@
     @media screen and (min-width: $w-tablet) {
       font-size: 18px;
       line-height: 22px;
+      margin-bottom: 20px;
     }
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 19px;
@@ -533,6 +552,7 @@
     @media screen and (min-width: $w-tablet) {
       font-size: 14px;
       line-height: 20px;
+      margin-bottom: 11px;
     }
     @media screen and (min-width: $w-desktop) {
       line-height: 22px;
@@ -561,5 +581,10 @@
         height: 10px;
       }
     }
+  }
+}
+.news-prev-head{
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 15px;
   }
 }

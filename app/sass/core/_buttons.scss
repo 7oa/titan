@@ -38,8 +38,11 @@
   }
   &:hover{
     @media screen and (min-width: $w-desktop) {
-      background-color: $bordo-de;
+      box-shadow: $shadow-bordo;
     }
+  }
+  &:focus{
+    background-color: $bordo-de;
   }
   span{
     &:nth-child(2){
