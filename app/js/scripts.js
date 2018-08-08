@@ -3,6 +3,7 @@
 //= plugins/_slick.min.js
 //= plugins/_sly-plugins.js
 //= plugins/_sly.min.js
+//= plugins/_iziModal.min.js
 
 //Scripts
 //= scripts/script.js

@@ -11,10 +11,14 @@
 
 @import "plugins/slick";
 @import "plugins/sly";
+@import "plugins/iziModal";
 
 @import "blocks/header-menu";
 @import "blocks/burger-icon";
 @import "blocks/slider-index-sm";
 @import "blocks/obj-slider";
+@import "blocks/form";
+
+@import "popups/feedback";
 
 @import "pages/index";
