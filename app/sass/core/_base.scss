@@ -18,7 +18,8 @@ a{
   text-decoration: none;
 }
 input:focus,
-textarea:focus{
+textarea:focus,
+button:focus{
   outline: none;
 }
 textarea{
@@ -86,7 +87,7 @@ button{
   @media screen and (min-width: $w-desktop) {
     font-size: 30px;
     line-height: 30px;
-    width: 425px;
+    width: 435px;
   }
   &:after{
     content: '';
@@ -100,7 +101,10 @@ button{
 
     }
     @media screen and (min-width: $w-desktop) {
-
+      margin-top: 23px;
+      margin-bottom: 32px;
+      height: 3px;
+      width: 140px;
     }
   }
 }
@@ -123,6 +127,10 @@ button{
   }
   @media screen and (min-width: $w-desktop) {
     margin-right: 0;
+    font-size: 12px;
+    line-height: 32px;
+    margin-top: 3px;
+    padding: 0 17px;
   }
   &:before{
     content: '';
@@ -131,7 +139,7 @@ button{
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: $bordo-a9;
+    background-color: $bordo-c1;
     transform: skew(-20deg);
   }
   span{

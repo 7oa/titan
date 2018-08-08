@@ -1,6 +1,11 @@
 .obj-slider{
   overflow: hidden;
-
+  @media screen and (min-width: $w-desktop) {
+    margin: 0 80px 46px;
+  }
+  &__list{
+    @include uldev();
+  }
   &__item{
     position: relative;
     padding-bottom: 10px;
@@ -9,6 +14,9 @@
     display: block;
     @media screen and (min-width: $w-tablet) {
       max-width: none;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin: 0;
     }
     &:before{
       content: '';
@@ -21,10 +29,18 @@
       @media screen and (min-width: $w-tablet) {
         width: calc(100% - 40px);
       }
+      @media screen and (min-width: $w-desktop) {
+        width: calc(100% - 145px);
+        right: 40px;
+        top: 60px;
+        height: calc(100% - 65px);
+      }
     }
   }
   &__slide{
-
+    float: left;
+    margin-right: 20px;
+    width: 540px;
     &:nth-child(n+4){
       display: none;
       @media screen and (min-width: $w-tablet) {
@@ -36,12 +52,18 @@
         @media screen and (min-width: $w-tablet) {
           margin-left: 10px;
         }
+        @media screen and (min-width: $w-desktop) {
+          margin-left: 0;
+        }
       }
     }
     &:nth-child(odd){
       .obj-slider__item{
         @media screen and (min-width: $w-tablet) {
           margin-right: 10px;
+        }
+        @media screen and (min-width: $w-desktop) {
+          margin-right: 0;
         }
       }
     }
@@ -50,6 +72,10 @@
     position: relative;
     z-index: 1;
     margin-right: 10px;
+    @media screen and (min-width: $w-desktop) {
+      padding-left: 30px;
+      margin-right: 50px;
+    }
   }
   &__img{
     background-size: contain;
@@ -57,6 +83,9 @@
     background-repeat: no-repeat;
     height: 120px;
     width: 100%;
+    @media screen and (min-width: $w-desktop) {
+      height: 210px;
+    }
   }
   &__ttl{
     color: $bordo-a9;
@@ -66,14 +95,56 @@
     font-family: Gilroy, sans-serif;
     background-color: $gray-f7;
     text-transform: uppercase;
+    @media screen and (min-width: $w-desktop) {
+      padding-left: 12px;
+      font-size: 18px;
+      line-height: 48px;
+      letter-spacing: 2px;
+    }
   }
   &__num{
     display: none;
+    @media screen and (min-width: $w-desktop) {
+      color: $gray-e4;
+
+      line-height: 31px;
+      font-weight: $extra-bold;
+      font-family: Gilroy, sans-serif;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      width: 90px;
+      display: flex;
+      align-items: center
+    }
+  }
+  &__num-cur{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 25px;
+      font-size: 56px;
+    }
+  }
+  &__num-sep{
+    @media screen and (min-width: $w-desktop) {
+      font-size: 56px;
+    }
+  }
+  &__num-from{
+    @media screen and (min-width: $w-desktop) {
+      margin-top: 25px;
+      font-size: 48px;
+    }
   }
   &__desctiption{
     display: none;
+    margin-left: 67px;
     @media screen and (min-width: $w-tablet) {
       display: block;
+    }
+    @media screen and (min-width: $w-desktop) {
+      column-count: 2;
+      margin-left: 100px;
+      padding-top: 5px;
     }
   }
   &__desctiption-bl{
@@ -81,9 +152,53 @@
     line-height: 15px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    margin-left: 67px;
     margin-right: 10px;
     font-family: Lato-Heavy, sans-serif;
     color: $gray-41;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+.obj-slider-bl{
+  position: relative;
+  @media screen and (min-width: $w-desktop) {
+
+  }
+  .sly-pages{
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+  }
+  .sly-btn{
+    @media screen and (min-width: $w-desktop) {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(207,63,97,0.75);
+      position: absolute;
+      top: 132px;
+      background-image: url('images/arrow.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: .5s;
+    }
+    &.disabled{
+      background-color: rgba(233,233,233,0.75);
+    }
+    &.prevPage{
+      left: 0;
+      transform: rotate(180deg);
+    }
+    &.nextPage{
+      right: 0;
+    }
+  }
+  .sly-scrollbar{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      margin: 0 80px;
+    }
   }
 }

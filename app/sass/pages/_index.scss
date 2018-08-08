@@ -7,7 +7,8 @@
     padding-top: 6px;
   }
   @media screen and (min-width: $w-desktop) {
-    padding-top: 154px;
+    margin-bottom: 128px;
+    padding-top: 155px;
   }
   &__bg{
     display: none;
@@ -64,7 +65,7 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 18px;
       line-height: 31px;
-      margin-bottom: 50px;
+      margin-bottom: 46px;
     }
   }
   &__slider{
@@ -189,8 +190,8 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 16px;
       line-height: 58px;
-      width: 220px;
-      height: 58px;
+      width: 217px;
+      height: 56px;
     }
   }
 }
@@ -198,16 +199,22 @@
   margin-bottom: 75px;
   @media screen and (min-width: $w-desktop) {
     display: flex;
-    margin-bottom: 110px;
+    margin-bottom: 78px;
   }
   &__c1{
     max-width: 470px;
     margin-bottom: 30px;
     @media screen and (min-width: $w-desktop) {
       max-width: none;
-      width: 540px;
+      width: 470px;
       flex: 0 0 auto;
       margin-bottom: 0;
+      margin-right: 70px;
+    }
+  }
+  &__c2{
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 20px;
     }
   }
   &__prev{
@@ -233,6 +240,9 @@
     justify-content: center;
     margin-bottom: 25px;
   }
+  @media screen and (min-width: $w-desktop) {
+    justify-content: flex-start;
+  }
   &__size{
     @include bg-img(contain);
     color: $bordo-a9;
@@ -252,6 +262,13 @@
       flex: 0 0 auto;
       margin-right: 50px;
     }
+    @media screen and (min-width: $w-desktop) {
+      width: 391px;
+      height: 156px;
+      font-size: 56px;
+      line-height: 31px;
+      margin-right: 38px;
+    }
   }
   &__ttl{
     text-align: center;
@@ -268,12 +285,20 @@
       max-width: 200px;
       margin: 0;
     }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 30px;
+      max-width: 250px;
+    }
   }
 }
 .buildings{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media screen and (min-width: $w-desktop) {
+    //justify-content: flex-start;
+  }
   &__item{
     display: flex;
     justify-content: center;
@@ -283,18 +308,32 @@
       @media screen and (min-width: $w-tablet) {
         margin-right: 25px;
       }
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 50px;
+      }
     }
   }
   &__img{
     @include bg-img(contain);
     margin-right: 30px;
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 25px;
+    }
     &_tc{
       width: 164px;
       height: 69px;
+      @media screen and (min-width: $w-desktop) {
+        width: 183px;
+        height: 77px;
+      }
     }
     &_off{
       width: 164px;
       height: 107px;
+      @media screen and (min-width: $w-desktop) {
+        width: 89px;
+        height: 103px;
+      }
     }
   }
   &__count{
@@ -322,20 +361,27 @@
 }
 .index-bl3{
   margin-bottom: 90px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 96px;
+  }
 }
 .index-bl4{
   margin-bottom: 90px;
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 120px;
+  }
 }
 .index-bl5{
   margin-bottom: 80px;
   @media screen and (min-width: $w-desktop) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 136px;
   }
 }
 .news-prev-bl {
   @media screen and (min-width: $w-desktop) {
-    width: 90%;
+    //width: 90%;
   }
   &:nth-child(n+2) {
     display: none;
@@ -350,6 +396,10 @@
   overflow-x: auto;
   justify-content: space-between;
   @media screen and (min-width: $w-tablet) {
+    overflow-x: hidden;
+  }
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 0;
   }
   &:after{
     content: '';
@@ -368,10 +418,20 @@
   @media screen and (min-width: $w-tablet) {
     width: 48%;
   }
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+  }
   &:nth-child(1){
     margin-right: 20px;
     @media screen and (min-width: $w-tablet) {
       margin-right: 0;
+    }
+  }
+  &:nth-child(n+2){
+    @media screen and (min-width: $w-desktop) {
+      display: none;
     }
   }
   &__img{
@@ -382,6 +442,23 @@
     position: relative;
     background-color: $gray-ce;
     margin-bottom: 22px;
+    @media screen and (min-width: $w-tablet) {
+      height: 315px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 220px;
+      height: 286px;
+      flex: 0 0 auto;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &__cnt{
+    @media screen and (min-width: $w-desktop) {
+      flex: 0 0 auto;
+      padding-top: 12px;
+      width: 300px;
+    }
   }
   &__date{
     position: absolute;
@@ -391,9 +468,19 @@
     height: 62px;
     color: $white;
     text-align: center;
-    background-color: $bordo-a9;
+    background-color: $bordo-c1;
     padding-top: 12px;
     box-sizing: border-box;
+    @media screen and (min-width: $w-tablet) {
+      top: auto;
+      bottom: 0;
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      top: 0;
+      bottom: auto;
+    }
   }
   &__date-d{
     font-size: 25px;
@@ -401,6 +488,15 @@
     font-family: Gilroy, sans-serif;
     font-weight: $light;
     margin-bottom: 4px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 25px;
+      font-weight: $extra-bold;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-weight: $light;
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
   }
   &__date-m{
     text-transform: uppercase;
@@ -408,6 +504,9 @@
     font-weight: $medium;
     font-size: 12px;
     line-height: 12px;
+    @media screen and (min-width: $w-tablet) {
+
+    }
   }
   &__ttl{
     font-size: 18px;
@@ -417,6 +516,13 @@
     font-family: Gilroy, sans-serif;
     margin-bottom: 11px;
     display: inline-block;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 19px;
+    }
   }
   &__prev{
     color: $gray-8c;
@@ -424,8 +530,36 @@
     line-height: 23px;
     font-family: Lato, sans-serif;
     font-weight: $medium;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      line-height: 22px;
+      margin-bottom: 14px;
+    }
   }
   &__read-more{
     display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: inline-block;
+      color: $bordo-c1;
+      font-size: 14px;
+      line-height: 30px;
+      font-family: Lato, sans-serif;
+      font-weight: $medium;
+    }
+    &:after{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        display: inline-block;
+        background-image: url('images/read-more.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+        margin-left: 10px;
+        width: 21px;
+        height: 10px;
+      }
+    }
   }
 }

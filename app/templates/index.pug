@@ -42,7 +42,7 @@ block content
 						Используя передовой российский и международный опыт в области консалтинга, строительства, управления недвижимостью, понимая перспективы развития города, команда высококвалифицированных специалистов нашей компании создает комфортные условия для Вашего бизнеса и полноценной жизни горожан.
 				._c2
 					.total-area
-						._size(style="background-image:url('images/shape1.png')") 99 403,6 м2
+						._size(style="background-image:url('images/shape1.png')") 99 403,6 м<sup>2</sup>
 						._ttl общая площадь недвижимости
 					.buildings
 						._item
@@ -61,65 +61,83 @@ block content
 					a.bl-all(href="#")
 						span Все торговые центры
 				.bl-body
-					.obj-slider
-						- for (var i=0;i<2;i++)
-							._slide
-								a._item(href="#")
-									._cnt
-										._img(style="background-image:url('images/tn1.png')")
-										._ttl ТРК «Титан-Арена»
-										._num 1/7
-										._desctiption
-											._desctiption-bl.
-												Воскресенская, 20<br>
-												Открыт: 12 декабря 2014
-											._desctiption-bl.
-												Торгово-развлекательный<br>
-												центр, 5 этажей
-											._desctiption-bl.
-												Общая площадь:<br>
-												38 000 кв2
-											._desctiption-bl.
-												Парковка:<br>
-												650 машиномест
-							._slide
-								a._item(href="#")
-									._cnt
-										._img(style="background-image:url('images/tn2.png')")
-										._ttl Центральный универмаг
-										._num 2/7
-										._desctiption
-											._desctiption-bl.
-												Поморская, 9<br>
-												Открыт: 31 мая 2014
-											._desctiption-bl.
-												Торгововый центр<br>
-												4 этажа
-											._desctiption-bl.
-												Общая площадь:<br>
-												35 000 кв2
-											._desctiption-bl.
-												Парковка:<br>
-												350 машиномест
-							._slide
-								a._item(href="#")
-									._cnt
-										._img(style="background-image:url('images/tn3.png')")
-										._ttl Магазин «Светлана»
-										._num 2/7
-										._desctiption
-											._desctiption-bl.
-												Поморская, 9<br>
-												Открыт: 31 мая 2014
-											._desctiption-bl.
-												Торгововый центр<br>
-												4 этажа
-											._desctiption-bl.
-												Общая площадь:<br>
-												35 000 кв2
-											._desctiption-bl.
-												Парковка:<br>
-												350 машиномест
+					.obj-slider-bl
+						.obj-slider
+							ul._list
+								- for (var i=0;i<3;i++)
+									li._slide
+										a._item(href="#")
+											._cnt
+												._img(style="background-image:url('images/tn1.png')")
+												._ttl ТРК «Титан-Арена»
+												._num
+													._num-cur 1
+													._num-sep /
+													._num-from 7
+												._desctiption
+													._desctiption-bl.
+														Воскресенская, 20<br>
+														Открыт: 12 декабря 2014
+													._desctiption-bl.
+														Торгово-развлекательный<br>
+														центр, 5 этажей
+													._desctiption-bl.
+														Общая площадь:<br>
+														38 000 кв2
+													._desctiption-bl.
+														Парковка:<br>
+														650 машиномест
+									li._slide
+										a._item(href="#")
+											._cnt
+												._img(style="background-image:url('images/tn2.png')")
+												._ttl Центральный универмаг
+												._num
+													._num-cur 2
+													._num-sep /
+													._num-from 7
+												._desctiption
+													._desctiption-bl.
+														Поморская, 9<br>
+														Открыт: 31 мая 2014
+													._desctiption-bl.
+														Торгововый центр<br>
+														4 этажа
+													._desctiption-bl.
+														Общая площадь:<br>
+														35 000 кв2
+													._desctiption-bl.
+														Парковка:<br>
+														350 машиномест
+									li._slide
+										a._item(href="#")
+											._cnt
+												._img(style="background-image:url('images/tn3.png')")
+												._ttl Магазин «Светлана»
+												._num
+													._num-cur 3
+													._num-sep /
+													._num-from 7
+												._desctiption
+													._desctiption-bl.
+														Поморская, 9<br>
+														Открыт: 31 мая 2014
+													._desctiption-bl.
+														Торгововый центр<br>
+														4 этажа
+													._desctiption-bl.
+														Общая площадь:<br>
+														35 000 кв2
+													._desctiption-bl.
+														Парковка:<br>
+														350 машиномест
+						ul.sly-pages
+						.obj-slider-controls
+							button.sly-btn.prevPage
+							button.sly-btn.nextPage
+						.sly-scrollbar
+							.sly-handle
+								.sly-mousearea
 				.bl-footer
 					a.bl-all(href="#")
 						span Все торговые центры
@@ -129,46 +147,61 @@ block content
 					a.bl-all(href="#")
 						span Все офисные центры
 				.bl-body
-					.obj-slider
-						- for (var i=0;i<2;i++)
-							._slide
-								a._item(href="#")
-									._cnt
-										._img(style="background-image:url('images/of1.png')")
-										._ttl Бизнес-центр на Поморской, 7
-										._num 1/7
-										._desctiption
-											._desctiption-bl.
-												Поморская, 7<br>
-												Открыт: 12 декабря 2014
-											._desctiption-bl.
-												Бизнес-центр,<br>
-												5 этажей
-											._desctiption-bl.
-												Общая площадь:<br>
-												38 000 кв2
-											._desctiption-bl.
-												Парковка: <br>
-												650 машиномест
-							._slide
-								a._item(href="#")
-									._cnt
-										._img(style="background-image:url('images/of2.png')")
-										._ttl Бизнес-центр на Поморской, 5
-										._num 2/7
-										._desctiption
-											._desctiption-bl.
-												Поморская, 5<br>
-												Открыт: 12 декабря 2014
-											._desctiption-bl.
-												Бизнес-центр,<br>
-												4 этажа
-											._desctiption-bl.
-												Общая площадь:<br>
-												29 000 кв2
-											._desctiption-bl.
-												Парковка: <br>
-												650 машиномест
+					.obj-slider-bl
+						.obj-slider
+							ul._list
+								- for (var i=0;i<4;i++)
+									li._slide
+										a._item(href="#")
+											._cnt
+												._img(style="background-image:url('images/of1.png')")
+												._ttl Бизнес-центр на Поморской, 7
+												._num
+													._num-cur 1
+													._num-sep /
+													._num-from 7
+												._desctiption
+													._desctiption-bl.
+														Поморская, 7<br>
+														Открыт: 12 декабря 2014
+													._desctiption-bl.
+														Бизнес-центр,<br>
+														5 этажей
+													._desctiption-bl.
+														Общая площадь:<br>
+														38 000 кв2
+													._desctiption-bl.
+														Парковка: <br>
+														650 машиномест
+									li._slide
+										a._item(href="#")
+											._cnt
+												._img(style="background-image:url('images/of2.png')")
+												._ttl Бизнес-центр на Поморской, 5
+												._num
+													._num-cur 2
+													._num-sep /
+													._num-from 7
+												._desctiption
+													._desctiption-bl.
+														Поморская, 5<br>
+														Открыт: 12 декабря 2014
+													._desctiption-bl.
+														Бизнес-центр,<br>
+														4 этажа
+													._desctiption-bl.
+														Общая площадь:<br>
+														29 000 кв2
+													._desctiption-bl.
+														Парковка: <br>
+														650 машиномест
+						ul.sly-pages
+						.obj-slider-controls
+							button.sly-btn.prevPage
+							button.sly-btn.nextPage
+						.sly-scrollbar
+							.sly-handle
+								.sly-mousearea
 				.bl-footer
 					a.bl-all(href="#")
 						span Все торговые центры
