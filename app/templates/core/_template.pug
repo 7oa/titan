@@ -15,7 +15,10 @@ html
     body
         .wrapper
             .content
-                include _header
+                - if (activeMenu == 'Главная')
+                    include _header-index
+                - else
+                    include _header
                 //end header
 
                 block content

@@ -22,6 +22,7 @@
       position: relative;
       width: 289px;
     }
+
     &:before{
       @media screen and (min-width: $w-desktop) {
         content: '';
@@ -34,6 +35,17 @@
         margin: 0 auto;
         background-image: url('images/logo-bg.png');
         @include bg-img(contain);
+      }
+    }
+    &_sm{
+      @media screen and (min-width: $w-desktop) {
+        width: 198px;
+      }
+      &:before{
+        @media screen and (min-width: $w-desktop) {
+          width: 198px;
+          height: 120px;
+        }
       }
     }
   }
@@ -51,6 +63,13 @@
       height: 158px;
       position: relative;
       margin: 12px auto 0;
+    }
+    &_sm{
+      @media screen and (min-width: $w-desktop) {
+        width: 100px;
+        height: 103px;
+        margin-top: 8px;
+      }
     }
   }
   &__container{
@@ -143,6 +162,14 @@
   &__menu-container{
     margin-bottom: 34px;
   }
+  &__contacts-d{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+  }
 }
 .contacts-header{
   margin-bottom: 39px;
@@ -182,5 +209,26 @@
     background-image: url('images/building-white.png');
     background-position-x: 0;
     background-size: 16px 17px;
+  }
+}
+.contact-d{
+  padding-top: 38px;
+  margin-right: 50px;
+  &__tel,
+  &__email{
+    color: $gray-23;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    display: block;
+  }
+  &__tel{
+    font-size: 16px;
+    margin-bottom: 4px;
+    letter-spacing: 1.5px;
+  }
+  &__email{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
 }

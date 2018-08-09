@@ -1,5 +1,7 @@
 @include font-face(Lato, "fonts/Lato-Regular/Lato-Regular", $regular);
 @include font-face(Lato, "fonts/Lato-Medium/Lato-Medium", $medium);
+@include font-face(Lato, "fonts/Lato-Semibold/Lato-Semibold", $semi-bold);
 @include font-face(Lato-Heavy, "fonts/Lato-Heavy/Lato-Heavy");
+
 @include font-face(Gilroy, "fonts/Gilroy-Light/Gilroy-Light", $light);
 @include font-face(Gilroy, "fonts/Gilroy-ExtraBold/Gilroy-ExtraBold", $extra-bold);

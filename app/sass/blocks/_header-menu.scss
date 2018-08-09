@@ -13,7 +13,8 @@
       position: relative;
     }
     @media screen and (min-width: $w-desktop) {
-      margin-right: 35px;
+      //margin-right: 35px;
+      margin-right: 20px;
     }
   }
   &__links{

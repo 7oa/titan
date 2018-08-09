@@ -1,0 +1,116 @@
+.page404{
+  padding-top: 70px;
+  padding-bottom: 45px;
+  text-align: center;
+  background-image: url('images/bg404.png');
+  background-repeat: no-repeat;
+  background-position: center 45px;
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 108px;
+    padding-bottom: 108px;
+    background-position: center 30px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 178px;
+    padding-bottom: 175px;
+    background-position: center 95px;
+  }
+  &__ttl{
+    font-size: 37px;
+    line-height: 37px;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    color: $bordo-a9;
+    max-width: 220px;
+    margin:  0 auto 20px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 33px;
+      line-height: 37px;
+      max-width: 200px;
+      margin-bottom: 44px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 48px;
+      line-height: 48px;
+      max-width: none;
+      margin-bottom: 73px;
+    }
+  }
+  &__txt{
+    font-family: Lato, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: $gray-41;
+    max-width: 330px;
+    margin: 0 auto 30px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 15px;
+      line-height: 23px;
+      margin-bottom: 46px;
+      max-width: 360px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      line-height: 31px;
+      margin-bottom: 65px;
+      max-width: 620px;
+    }
+    a{
+      color: $bordo-a9;
+      border-bottom: 1px solid $bordo-a9;
+      &:hover{
+        border-bottom: none;
+      }
+    }
+  }
+  &__bottom{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+  }
+  &__btn{
+    font-size: 15px;
+    line-height: 51px;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto 20px;
+    display: block;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    letter-spacing: 1.6px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 14px;
+      line-height: 44px;
+      margin-bottom: 7px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin: 0;
+      width: 300px;
+      transition: .5s;
+      line-height: 54px;
+      font-size: 16px;
+    }
+    &_white{
+      background-color: $white;
+      color: $bordo-a9;
+      border: 2px solid $bordo-a9;
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 20px;
+      }
+    }
+    &_red{
+      background-color: $bordo-a9;
+      color: $white;
+      border: 2px solid $bordo-a9;
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        box-shadow: $shadow-bordo;
+      }
+    }
+  }
+}

@@ -164,3 +164,34 @@ button{
     }
   }
 }
+.page-head{
+
+}
+.page-ttl{
+  color: $gray-41;
+  font-family: Gilroy, sans-serif;
+  font-weight: $extra-bold;
+  font-size: 25px;
+  line-height: 31px;
+  @media screen and (min-width: $w-tablet) {
+    line-height: 41px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  &:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 135px;
+    background-color: $bordo-a9;
+    margin-top: 23px;
+    @media screen and (min-width: $w-tablet) {
+      width: 120px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 140px;
+    }
+  }
+}

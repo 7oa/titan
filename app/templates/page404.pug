@@ -1,0 +1,20 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = '404';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page404
+			._container.container
+				._ttl Страница не найдена
+				._txt.
+					Ой, страница не найдена! Возможно она была удалена или перенесена. Вы можете <a href="#">вернуться</a> на предыдущую страницу или <a href="/">перейти на главную</a>.
+				._bottom
+					a._btn.-red(href="#") перейти на главную
+					a._btn.-white(href="#") вернуться назад
+
+	//end workarea

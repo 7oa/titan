@@ -1,0 +1,61 @@
+.about-slider{
+  position: relative;
+  &__item{
+    position: relative;
+    box-shadow: $shadow-gray;
+    background-color: $white;
+    @media screen and (min-width: $w-desktop) {
+      padding: 55px 80px 117px;
+      margin-top: 95px;
+    }
+  }
+  &__txt{
+    font-size: 15px;
+    line-height: 25px;
+    @media screen and (min-width: $w-tablet) {
+      width: calc(100% - 250px);
+      font-size: 13px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 690px;
+      font-size: 18px;
+      line-height: 31px;
+    }
+  }
+  &__img{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      width: 224px;
+      height: 224px;
+      @include bg-img(cover);
+      position: absolute;
+      right: 20px;
+      bottom: 60px;
+
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 380px;
+      height: 380px;
+      right: 80px;
+      bottom: 40px;
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    @include uldev();
+    display: flex;
+    li{
+      font-size: 0;
+      line-height: 0;
+      width: 5px;
+      height: 5px;
+      background-color: $bordo-a9;
+      margin: 5px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -70,6 +70,22 @@ $(document).ready(function() {
         infinite: true
     });
 
+    //слайдер о компании
+    $('.about-slider').slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
+    });
+
     objSlider();
 
     //feedback
