@@ -3,22 +3,20 @@
   position: relative;
   padding: 33px 30px;
   @media screen and (min-width: $w-tablet) {
-    padding: 80px 42px;
+    padding: 45px 42px;
   }
   @media screen and (min-width: $w-desktop) {
     padding: 55px 80px 80px;
   }
   &__head{
     margin-bottom: 14px;
-
     @media screen and (min-width: $w-tablet) {
+    }
+    @media screen and (min-width: $w-desktop) {
       background-image: url('images/feedback.png');
       background-repeat: no-repeat;
       background-position: right center;
       background-size: contain;
-      height: 50px;
-    }
-    @media screen and (min-width: $w-desktop) {
       height: 84px;
       margin-bottom: 30px;
     }
@@ -90,7 +88,6 @@
     font-weight: $medium;
     @media screen and (min-width: $w-tablet) {
       font-size: 12px;
-      line-height: 20px;
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 18px;
@@ -99,6 +96,9 @@
   &__input{
     border-bottom: 1px solid $gray-8c;
     padding: 0 15px;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 31px;
+    }
     @media screen and (min-width: $w-desktop) {
       line-height: 41px;
     }
@@ -110,10 +110,8 @@
     height: 116px;
     line-height: 20px;
     @media screen and (min-width: $w-tablet) {
-      line-height: 20px;
     }
     @media screen and (min-width: $w-desktop) {
-      line-height: 20px;
       height: 140px;
     }
   }
@@ -174,9 +172,11 @@
     color: $gray-4e;
     display: flex;
     padding-left: 30px;
-    @media screen and (min-width: $w-desktop) {
+    @media screen and (min-width: $w-tablet) {
       font-size: 12px;
       line-height: 16px;
+    }
+    @media screen and (min-width: $w-desktop) {
       padding-left: 35px;
     }
     a{
@@ -238,7 +238,7 @@
     border: none;
     letter-spacing: 2px;
     @media screen and (min-width: $w-tablet) {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 42px;
     }
     @media screen and (min-width: $w-desktop) {

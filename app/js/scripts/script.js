@@ -81,7 +81,7 @@ $(document).ready(function() {
         transitionInOverlay: 'fadeIn',
         transitionOutOverlay: 'fadeOut',
         onOpening: function(){
-            if(isDesktop) {
+            if(window.matchMedia('(min-width: 780px)').matches) {
                 formModal.iziModal('setWidth', 700);
             }
             else formModal.iziModal('setFullscreen', true);
