@@ -21,7 +21,7 @@
     &:before{
       content: '';
       position: absolute;
-      border: 2px solid $gray-ce;
+      border: 2px solid $gray-c9;
       right: 0;
       top: 30px;
       width: calc(100% - 60px);
@@ -118,7 +118,6 @@
     display: none;
     @media screen and (min-width: $w-desktop) {
       color: $gray-e4;
-
       line-height: 31px;
       font-weight: $extra-bold;
       font-family: Gilroy, sans-serif;
@@ -152,11 +151,30 @@
     margin-left: 67px;
     @media screen and (min-width: $w-tablet) {
       display: block;
+      position: relative;
     }
     @media screen and (min-width: $w-desktop) {
       column-count: 2;
       margin-left: 100px;
       padding-top: 5px;
+    }
+    &:before{
+      @media screen and (min-width: $w-tablet) {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border: 2px solid $gray-c9;
+        position: absolute;
+        left: -67px;
+        top: 0;
+        background-image: url('images/arr-gray.png');
+        @include bg-img(8px 14px);
+      }
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
     }
   }
   &__desctiption-bl{
