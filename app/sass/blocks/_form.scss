@@ -1,18 +1,38 @@
 .form {
   background-color: $white;
   position: relative;
-  padding: 35px 30px;
-  @media screen and (min-width: $w-mobile) {
-    padding: 35px 30px;
-  }
+  padding: 33px 30px;
   @media screen and (min-width: $w-tablet) {
     padding: 80px 42px;
   }
   @media screen and (min-width: $w-desktop) {
-    padding: 50px 80px 88px;
+    padding: 55px 80px 80px;
   }
   &__head{
+    margin-bottom: 14px;
 
+    @media screen and (min-width: $w-tablet) {
+      background-image: url('images/feedback.png');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      height: 50px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 84px;
+      margin-bottom: 30px;
+    }
+    &:after{
+      content: '';
+      display: block;
+      height: 2px;
+      width: 135px;
+      background-color: $bordo-a9;
+      margin-top: 18px;
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
+    }
   }
   &__ttl{
     font-family: Gilroy, sans-serif;
@@ -26,55 +46,243 @@
     }
     @media screen and (min-width: $w-desktop) {
       font-size: 48px;
-      line-height: 48px;
+      line-height: 84px;
     }
+  }
+  &__row{
+    margin-bottom: 17px;
+    width: 100%;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 23px;
+    }
+    &_w60{
+      @media screen and (min-width: $w-desktop) {
+        width: 59%;
+      }
+    }
+    &_w40{
+      @media screen and (min-width: $w-desktop) {
+        width: 39%;
+      }
+    }
+    &_textarea{
+      margin-top: 12px;
+    }
+  }
+  &__fields{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__hlp{
+    position: relative;
+    padding-top: 10px;
   }
   &__input,
   &__textarea{
-    box-sizing: border-box;
-    padding: 0 15px;
     width: 100%;
-    text-transform: uppercase;
+    border: none;
+    transition: .5s;
+    box-sizing: border-box;
     font-size: 15px;
-    line-height: 25px;
+    line-height: 37px;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
     @media screen and (min-width: $w-tablet) {
       font-size: 12px;
       line-height: 20px;
     }
     @media screen and (min-width: $w-desktop) {
-      font-size: 12px;
-      line-height: 31px;
+      font-size: 18px;
     }
   }
   &__input{
-    border: none;
     border-bottom: 1px solid $gray-8c;
+    padding: 0 15px;
+    @media screen and (min-width: $w-desktop) {
+      line-height: 41px;
+    }
   }
   &__textarea{
+    resize: none;
+    padding: 5px 15px;
     border: 1px solid $gray-8c;
-    height: 140px;
-    line-height: 25px;
+    height: 116px;
+    line-height: 20px;
     @media screen and (min-width: $w-tablet) {
       line-height: 20px;
     }
     @media screen and (min-width: $w-desktop) {
-      line-height: 31px;
+      line-height: 20px;
+      height: 140px;
+    }
+  }
+  &__placeholder{
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    transition: .3s ease all;
+    color: $gray-8c;
+    text-transform: uppercase;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+    }
+    span{
+      color: $bordo-a9;
+      font-size: 25px;
+      width: 12px;
+      margin-right: 5px;
+      display: inline-block;
+      @media screen and (min-width: $w-desktop) {
+        font-size: 30px;
+      }
+    }
+    &.moveUp{
+      top: -10px;
+      font-size: 10px;
+      color: $gray-8c;
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+  &__label{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: $gray-8c;
+  }
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__checkbox + label {
+    position: relative;
+    cursor: pointer;
+    font-family: Lato, sans-serif;
+    font-weight: $regular;
+    font-size: 9px;
+    line-height: 13px;
+    color: $gray-4e;
+    display: flex;
+    padding-left: 30px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      line-height: 16px;
+      padding-left: 35px;
+    }
+    a{
+      color: $gray-4e;
+      border-bottom: 1px solid $gray-4e;
+    }
+  }
+  &__checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 1px solid $gray-8c;
+    background: transparent;
+    font-size: 0;
+    line-height: 0;
+  }
+  &__checkbox + label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 13px;
+    height: 13px;
+    transition: .2s;
+  }
+  &__checkbox:checked + label:after {
+    background: $bordo-a9;
+  }
+  &__recaptcha{
+    margin-bottom: 17px;
+    @media screen and (min-width: $w-desktop) {
+      width: 205px;
+      margin-right: 35px;
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  &__button{
+    @media screen and (min-width: $w-desktop) {
+      flex: 1 1 auto;
+    }
+  }
+  &__submit{
+    background-color: $bordo-a9;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    color: $white;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    line-height: 55px;
+    border: none;
+    letter-spacing: 2px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 12px;
+      line-height: 42px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 58px;
+      transition: .5s;
+    }
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        box-shadow: $shadow-bordo;
+      }
+    }
+    &:focus{
+      @media screen and (min-width: $w-desktop) {
+        background-color: $bordo-de;
+      }
+    }
+  }
+  &__bottom{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
     }
   }
 }
 .modal-form__close{
   position: absolute;
-  top: 35px;
-  right: 50px;
-  width: 35px;
-  height: 35px;
+  top: 38px;
+  right: 57px;
+  width: 34px;
+  height: 34px;
+  background-image: url('images/close-red.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   @media screen and (min-width: $w-tablet) {
 
   }
   @media screen and (min-width: $w-desktop) {
-    right: -20px;
-    top: 55px;
+    right: -89px;
+    top: 58px;
     width: 63px;
     height: 63px;
+    background-image: url('images/close-white.png');
   }
 }

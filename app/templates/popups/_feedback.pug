@@ -1,16 +1,34 @@
 .modal-form.modal#feedback
-    .form
+    form.form
         ._head
             ._ttl Напишите нам
         ._body
-            form._form
+            ._form
                 ._fields
+                    ._row.-w60
+                        ._hlp
+                            input._input.js-movePh(type="text")
+                            span._placeholder <span></span>Имя
+                    ._row.-w40
+                        ._hlp
+                            input._input.js-movePh(type="text")
+                            span._placeholder <span>*</span>Телефон
                     ._row.-w50
-                        input._input(type="text" placeholder="имя")
-                    ._row.-w50
-                        input._input(type="tel" placeholder="телефон")
-                    ._row.-w50
-                        input._input(type="email" placeholder="e-mail")
+                        ._hlp
+                            input._input.js-movePh(type="text")
+                            span._placeholder <span>*</span>e-mail
+                    ._row.-textarea
+                        ._hlp
+                            textarea._textarea.js-movePh()
+                            span._placeholder <span></span>Сообщение
                     ._row
-                        textarea._textarea(placeholder="сообщение")
-    button._close(type="button" data-izimodal-close="") X
+                        input._checkbox#checkbox(type="checkbox" checked)
+                        label._checkbox-label(for="checkbox")
+                            span Отправляя заявку, я соглашаюсь на обработку персональных данных, в соответствии с <a href="#">политикой конфиденциальности</a>
+            ._bottom
+                ._recaptcha
+                    img(src="images/TEMP/recaptcha.png")
+                ._button
+                    input._submit(type="submit" value="Отправить")
+
+    button._close(type="button" data-izimodal-close="")

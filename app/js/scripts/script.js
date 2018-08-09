@@ -84,9 +84,23 @@ $(document).ready(function() {
             if(isDesktop) {
                 formModal.iziModal('setWidth', 700);
             }
-            else formModal.iziModal('setWidth', '100%');
+            else formModal.iziModal('setFullscreen', true);
+            //else formModal.iziModal('setWidth', '100%');
         }
     });
 
+    //form
+    if($('.js-movePh').length>0){
+        $('.js-movePh').each(function() {
+            if($(this).val()) $(this).next('span').addClass('moveUp');
+        });
+        $('.js-movePh').on('focus', function() {
+            $(this).next('span').addClass('moveUp');
+        });
+        $('.js-movePh').on('focusout', function() {
+            if(!$(this).val()) $(this).next('span').removeClass('moveUp');
+        });
+        $("#phone").mask("+7 999 999 99 99");
+    }
 
 });

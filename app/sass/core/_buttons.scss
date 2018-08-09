@@ -42,7 +42,9 @@
     }
   }
   &:focus{
-    background-color: $bordo-de;
+    @media screen and (min-width: $w-desktop) {
+      background-color: $bordo-de;
+    }
   }
   span{
     &:nth-child(2){
