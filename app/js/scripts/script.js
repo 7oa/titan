@@ -1,5 +1,6 @@
 // js jquery
-var isModile = !window.matchMedia('(min-width: 680px)').matches;
+var isMobile = !window.matchMedia('(min-width: 680px)').matches;
+var isDesktop = window.matchMedia('(min-width: 1280px)').matches;
 
 //слайдер объектов
 function objSlider(){
@@ -27,12 +28,13 @@ function objSlider(){
     }
 }
 $(window).on('load resize', function(){
-    isModile = !window.matchMedia('(min-width: 680px)').matches;
+    isMobile = !window.matchMedia('(min-width: 680px)').matches;
+    isDesktop = window.matchMedia('(min-width: 1280px)').matches;
     if($('.obj-slider').length>0){
         objSlider();
         $('.obj-slider').each(function(){
             var frame  = $(this);
-            if(!isModile) frame.sly('reload');
+            if(!isMobile) frame.sly('reload');
             else frame.sly(false);
         });
     }
@@ -69,6 +71,22 @@ $(document).ready(function() {
     });
 
     objSlider();
+
+    //feedback
+    var formModal =  $('.modal-form').iziModal({
+        radius: 0,
+        overlayColor: 'rgba(0, 0, 0, 0.7)',
+        transitionIn: 'comingIn',
+        transitionOut: 'comingOut',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut',
+        onOpening: function(){
+            if(isDesktop) {
+                formModal.iziModal('setWidth', 700);
+            }
+            else formModal.iziModal('setWidth', '100%');
+        }
+    });
 
 
 });

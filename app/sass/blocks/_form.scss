@@ -1,0 +1,80 @@
+.form {
+  background-color: $white;
+  position: relative;
+  padding: 35px 30px;
+  @media screen and (min-width: $w-mobile) {
+    padding: 35px 30px;
+  }
+  @media screen and (min-width: $w-tablet) {
+    padding: 80px 42px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding: 50px 80px 88px;
+  }
+  &__head{
+
+  }
+  &__ttl{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    color: $gray-41;
+    font-size: 25px;
+    line-height: 31px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+  &__input,
+  &__textarea{
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 25px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      line-height: 31px;
+    }
+  }
+  &__input{
+    border: none;
+    border-bottom: 1px solid $gray-8c;
+  }
+  &__textarea{
+    border: 1px solid $gray-8c;
+    height: 140px;
+    line-height: 25px;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      line-height: 31px;
+    }
+  }
+}
+.modal-form__close{
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  width: 35px;
+  height: 35px;
+  @media screen and (min-width: $w-tablet) {
+
+  }
+  @media screen and (min-width: $w-desktop) {
+    right: -20px;
+    top: 55px;
+    width: 63px;
+    height: 63px;
+  }
+}
