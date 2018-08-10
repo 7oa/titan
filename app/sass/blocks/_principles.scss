@@ -1,0 +1,138 @@
+.principles{
+  &__list{
+    padding-top: 30px;
+    padding-bottom: 110px;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 49px;
+      padding-bottom: 37px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding-top: 63px;
+      justify-content: space-around;
+    }
+  }
+  &__item{
+    @media screen and (min-width: $w-tablet) {
+      width: 50%;
+      display: flex;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 30%;
+      display: block;
+      margin-bottom: 70px;
+    }
+  }
+  &__cnt{
+    flex: 1 1 auto;
+  }
+  &__img{
+    @include bg-img(contain);
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-tablet) {
+      width: 50px;
+      height: 50px;
+      flex: 0 0 auto;
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 19px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  &__name{
+    font-size: 19px;
+    line-height: 25px;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    margin-bottom: 10px;
+    color: $gray-4e;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 18px;
+      line-height: 19px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 18px;
+    }
+  }
+  &__txt{
+    font-family: Lato, sans-serif;
+    font-weight: $regular;
+    color: $gray-4e;
+    font-size: 14px;
+    line-height: 25px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 12px;
+      line-height: 19px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    background-image: url('images/arr-bordo.png');
+    @include bg-img(cover);
+    bottom: 50px;
+    font-size: 0;
+    line-height: 0;
+    z-index: 1;
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+    &.slick-prev{
+      transform: rotate(180deg);
+      left: 0;
+    }
+    &.slick-next{
+      right: 0;
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    @include uldev();
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+    button{
+      font-size: 0;
+      line-height: 0;
+      width: 7px;
+      height: 7px;
+      background-color: $bordo-a9;
+      border-radius: 50%;
+      margin: 10px;
+      transition: .5s;
+      border: 2px solid transparent;
+    }
+    .slick-active{
+      button{
+        width: 12px;
+        height: 12px;
+        background-color: $white;
+        border-color: $bordo-a9;
+      }
+    }
+  }
+}

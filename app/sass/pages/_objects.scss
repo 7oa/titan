@@ -1,0 +1,11 @@
+.object-list{
+  width: 100px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  @media screen and (min-width: $w-mobile) {
+    padding: 0 15px;
+  }
+  @media screen and (min-width: $w-tablet) {
+    padding: 0 10px;
+  }
+}
