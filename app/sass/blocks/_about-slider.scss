@@ -1,26 +1,45 @@
 .about-slider{
   position: relative;
+
+  @media screen and (min-width: $w-tablet) {
+    margin-top: -35px;
+
+  }
+  @media screen and (min-width: $w-desktop) {
+
+  }
   &__item{
     position: relative;
     box-shadow: $shadow-gray;
     background-color: $white;
+    @media screen and (min-width: $w-tablet) {
+      margin-top: 35px;
+    }
     @media screen and (min-width: $w-desktop) {
-      padding: 55px 80px 117px;
-      margin-top: 95px;
+      margin-top: 100px;
     }
   }
   &__txt{
     font-size: 15px;
     line-height: 25px;
+    padding: 35px 30px 170px;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
     @media screen and (min-width: $w-tablet) {
-      width: calc(100% - 250px);
+      width: calc(100% - 300px);
       font-size: 13px;
       line-height: 22px;
+      padding-top: 32px;
+      padding-bottom: 65px;
+      min-height: 250px;
+      box-sizing: border-box;
     }
     @media screen and (min-width: $w-desktop) {
-      width: 690px;
+      padding: 49px 80px 110px;
+      width: 800px;
       font-size: 18px;
       line-height: 31px;
+      min-height: 315px;
     }
   }
   &__img{
@@ -42,20 +61,87 @@
       bottom: 40px;
     }
   }
+  .slick-arrow{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    background-image: url('images/arr-bordo.png');
+    @include bg-img(cover);
+    bottom: 60px;
+    font-size: 0;
+    line-height: 0;
+    z-index: 1;
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+    &.slick-prev{
+      transform: rotate(180deg);
+      left: 40px;
+    }
+    &.slick-next{
+      right: 40px;
+    }
+  }
   .slick-dots{
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    @include uldev();
+    right: 0;
+    left: 0;
+    bottom: 60px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    @include uldev();
+    @media screen and (min-width: $w-tablet) {
+      bottom: 26px;
+      left: 26px;
+      justify-content: flex-start;
+    }
+    @media screen and (min-width: $w-desktop) {
+      left: 80px;
+      bottom: 40px;
+    }
     li{
+      line-height: 0;
+    }
+    button{
       font-size: 0;
       line-height: 0;
-      width: 5px;
-      height: 5px;
+      width: 7px;
+      height: 7px;
       background-color: $bordo-a9;
-      margin: 5px;
       border-radius: 50%;
+      margin: 10px;
+      transition: .5s;
+      border: 2px solid transparent;
+      @media screen and (min-width: $w-tablet) {
+        width: 4px;
+        height: 4px;
+        margin: 6px;
+        border: 1px solid transparent;
+      }
+      @media screen and (min-width: $w-desktop) {
+        width: 5px;
+        height: 5px;
+        margin: 10px;
+        border: 2px solid transparent;
+      }
+    }
+    .slick-active{
+      button{
+        width: 12px;
+        height: 12px;
+        background-color: $white;
+        border-color: $bordo-a9;
+        @media screen and (min-width: $w-tablet) {
+          width: 7px;
+          height: 7px;
+        }
+        @media screen and (min-width: $w-desktop) {
+          width: 11px;
+          height: 11px;
+        }
+      }
     }
   }
 }

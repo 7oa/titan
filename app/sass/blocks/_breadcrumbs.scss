@@ -1,16 +1,20 @@
-@media screen and (min-width: $w-desktop) {
-  .breadcrumbs {
+.breadcrumbs {
+  display: none;
+  @media screen and (min-width: $w-desktop) {
     display: block;
-    margin-bottom: 35px;
-    &__item {
+    margin-bottom: 32px;
+  }
+  &__item {
+    @media screen and (min-width: $w-desktop) {
       font-size: 11px;
       line-height: 22px;
       font-family: Lato, sans-serif;
       font-weight: $semi-bold;
       text-transform: uppercase;
       color: $gray-8c;
-      margin-right: 10px;
+      margin-right: 11px;
       display: inline-block;
+      letter-spacing: 1.2px;
     }
   }
 }

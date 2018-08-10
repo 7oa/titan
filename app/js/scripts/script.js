@@ -76,12 +76,38 @@ $(document).ready(function() {
         dots: true,
         infinite: true,
         fade: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        speed: 1000,
         responsive: [
             {
                 breakpoint: 680,
                 settings: {
                     arrows: true
                 }
+            }
+        ]
+    });
+
+    //слайдер Принципы работы
+    $('.principles-slider').slick({
+        dots: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 680,
+                settings: "unslick"
+            }
+        ]
+    });
+    //слайдер Сотрудники компании
+    $('.employees-slider').slick({
+        dots: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: "unslick"
             }
         ]
     });
@@ -119,4 +145,8 @@ $(document).ready(function() {
         $("#phone").mask("+7 999 999 99 99");
     }
 
+});
+$(window).on('resize', function(){
+    $('.principles-slider').slick('resize');
+    $('.employees-slider').slick('resize');
 });

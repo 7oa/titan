@@ -4,6 +4,7 @@
 //= plugins/_sly-plugins.js
 //= plugins/_sly.min.js
 //= plugins/_iziModal.min.js
+//= plugins/_jquery.maskedinput.min.js
 
 //Scripts
 //= scripts/script.js
