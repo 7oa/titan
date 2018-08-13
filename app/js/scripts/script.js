@@ -112,6 +112,34 @@ $(document).ready(function() {
         ]
     });
 
+    //слайдер контакты Сотрудники компании
+    if (!window.matchMedia('(min-width: 680px)').matches) {
+        $('.contacts-employees-slider').slick({
+            dots: true,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: "unslick"
+                }
+            ]
+        });
+    }
+    if (window.matchMedia('(min-width: 680px)').matches) {
+        $('.contacts-employees-slider').slick({
+            dots: true,
+            slidesPerRow: 1,
+            rows: 2,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: "unslick"
+                }
+            ]
+        });
+    }
+
     objSlider();
 
     //feedback
@@ -149,4 +177,5 @@ $(document).ready(function() {
 $(window).on('resize', function(){
     $('.principles-slider').slick('resize');
     $('.employees-slider').slick('resize');
+    $('.contacts-employees-slider').slick('resize');
 });

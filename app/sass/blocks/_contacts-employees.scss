@@ -1,4 +1,4 @@
-.employees{
+.contacts-employees{
   @media screen and (min-width: $w-tablet) {
     width: 530px;
     margin: 0 auto;
@@ -7,29 +7,32 @@
     width: 100%;
   }
   &__ttl{
-    margin-bottom: 50px;
     @media screen and (min-width: $w-tablet) {
-      margin-bottom: 60px;
+      padding-bottom: 20px;
     }
     @media screen and (min-width: $w-desktop) {
-      margin-bottom: 73px;
+      padding-bottom: 45px;
     }
   }
   &__list{
     padding-bottom: 110px;
     @media screen and (min-width: $w-tablet) {}
     @media screen and (min-width: $w-desktop) {
+      padding-bottom: 0;
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: 0;
     }
   }
   &__item{
     @media screen and (min-width: $w-desktop) {
       width: 50%;
-      margin-bottom: 50px;
-      padding: 0 45px;
+      margin-bottom: 25px;
       box-sizing: border-box;
+    }
+    &:first-of-type{
+      @media screen and (min-width: $w-desktop) {
+        width: 100%;
+      }
     }
   }
   &__inner{
@@ -78,7 +81,7 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 24px;
       line-height: 26px;
-      margin-bottom: 2px;
+      margin-bottom: 9px;
     }
   }
   &__d{
@@ -104,7 +107,6 @@
     color: $bordo-a9;
     font-size: 15px;
     line-height: 25px;
-    margin-bottom: 22px;
     display: inline-block;
     border-bottom: 1px solid $bordo-a9;
     @media screen and (min-width: $w-tablet) {
@@ -114,39 +116,9 @@
     @media screen and (min-width: $w-desktop) {
       font-size: 14px;
       line-height: 18px;
-      margin-bottom: 15px;
     }
     &:hover{
       border-color: transparent;
-    }
-  }
-  &__quote{
-    font-family: Lato, sans-serif;
-    font-size: 12px;
-    line-height: 18px;
-    color: $gray-4e;
-    font-style: italic;
-    font-weight: $regular;
-    background-image: url('images/quote.png');
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 40px 30px;
-    padding-left: 10px;
-    padding-top: 3px;
-    min-height: 30px;
-    @media screen and (min-width: $w-tablet) {
-      background-size: 40px 25px;
-      padding-left: 55px;
-      padding-top: 0;
-      background-position-y: 2px;
-      min-height: 25px;
-      line-height: 16px;
-    }
-    @media screen and (min-width: $w-desktop) {
-      background-size: 24px 16px;
-      padding-left: 37px;
-      min-height: 16px;
-      line-height: 18px;
     }
   }
   .slick-arrow{

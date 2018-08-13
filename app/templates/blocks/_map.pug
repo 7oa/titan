@@ -1,17 +1,23 @@
-script(src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU")
+script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
 script.
+    var center = [64.53522455736649,40.52510449999986];
+    if (window.matchMedia('(min-width: 680px)').matches) {
+        center = [64.53521532001317,40.528237320129264];
+    }
     ymaps.ready(init);
     function init () {
         var map = new ymaps.Map("map", {
-            center: [64.5422580573521,40.567459999999954],
-            zoom: 17
+            center: center,
+            zoom: 17,
+            controls: []
         });
-        var placemark = new ymaps.Placemark([64.54225574861084,40.56746536441798], {
-            balloonContent: '163 000, Росcия, г.Архангельск, ул.Тимме, д.3',
+        var placemark = new ymaps.Placemark([64.53522455736649,40.52510449999986], {
+            balloonContent: '163000, Архангельск, ул. Поморская, д. 7',
         }, {
-            iconImageHref: 'images/balloon.png',
-            iconImageSize: [182, 182],
-            iconImageOffset: [-118,-110]
+            iconLayout: 'default#image',
+            iconImageHref: 'images/pin-red.png',
+            iconImageSize: [28, 41],
+            iconImageOffset: [-16,-41]
         });
         map.geoObjects.add(placemark);
     }

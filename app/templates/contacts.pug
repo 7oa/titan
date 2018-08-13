@@ -1,0 +1,79 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Контакты';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page-contacts
+			.container
+				.page-head
+					.breadcrumbs
+						a._item(href="#") Главная
+						span._item /
+						span._item Контакты
+					.page-ttl Контакты
+
+			.page-body
+				.page-contacts__bl1
+					.page-contacts__map-bl
+						.page-contacts__map
+							.map#map
+							include blocks/_map
+						.page-contacts__map-container.container
+							.page-contacts__form-bl
+								.page-contacts__contacts
+									.contacts-cbl.-addr.
+										Архангельск, 163000<br>
+										ул. Поморская, д. 7
+									.contacts-cbl.-tel.
+										(8182) 20-74-85<br>
+										(8182) 21-13-74
+								.page-contacts__form
+									.form
+										._form
+											._fields
+												._row
+													._hlp
+														input._input.js-movePh(type="text")
+														span._placeholder <span></span>Имя
+												._row
+													._hlp
+														input._input.js-movePh#phone(type="text")
+														span._placeholder <span>*</span>Телефон
+												._row
+													._hlp
+														input._input.js-movePh(type="email")
+														span._placeholder <span>*</span>e-mail
+												._row.-textarea
+													._hlp
+														textarea._textarea.js-movePh()
+														span._placeholder <span></span>Сообщение
+												._row
+													input._checkbox#checkbox(type="checkbox" checked)
+													label._checkbox-label(for="checkbox")
+														span Отправляя заявку, я соглашаюсь на обработку персональных данных, в соответствии с <a href="#">политикой конфиденциальности</a>
+										._bottom2
+											._recaptcha
+												img(src="images/TEMP/recaptcha.png")
+											._button
+												input._submit(type="submit" value="Отправить")
+
+				.page-contacts__bl2
+					.container
+						.contacts-employees
+							._ttl.bl-ttl Сотрудники компании
+							._list.contacts-employees-slider
+								- for (var i=0;i<7;i++)
+									._item
+										._inner
+											._img(style="background-image:url('http://www.potashnikov.com/gallary/d/40785-1/Aleksandr-Kutas.jpg')")
+											._cnt
+												._name ГОРДЕЕВ<br>Андрей Викторович
+												._d Заместитель генерального директора
+												a._email(href="mailto:gordeev@tdevelop.ru") gordeev@tdevelop.ru
+
+	//end workarea

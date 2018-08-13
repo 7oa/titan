@@ -1,12 +1,14 @@
 .form {
-  background-color: $white;
   position: relative;
-  padding: 33px 30px;
-  @media screen and (min-width: $w-tablet) {
-    padding: 45px 42px;
-  }
-  @media screen and (min-width: $w-desktop) {
-    padding: 55px 80px 80px;
+  &_feedback{
+    background-color: $white;
+    padding: 33px 30px;
+    @media screen and (min-width: $w-tablet) {
+      padding: 45px 42px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 55px 80px 80px;
+    }
   }
   &__head{
     margin-bottom: 14px;
@@ -218,6 +220,7 @@
     }
     img{
       max-width: 100%;
+      max-height: 100%;
     }
   }
   &__button{
