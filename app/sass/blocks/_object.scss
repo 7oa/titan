@@ -6,9 +6,10 @@
   margin: 0 auto 40px;
   @media screen and (min-width: $w-tablet) {
     max-width: none;
+    width: 310px;
   }
   @media screen and (min-width: $w-desktop) {
-    margin: 0;
+    width: 540px;
   }
   &:before{
     content: '';
@@ -55,7 +56,7 @@
     font-weight: $extra-bold;
     font-family: Gilroy, sans-serif;
     text-transform: uppercase;
-    background-color: $gray-f7;
+    background-color: $white;
     @media screen and (min-width: $w-tablet) {
       font-size: 15px;
       line-height: 20px;
@@ -109,7 +110,10 @@
         @include bg-img(8px 14px);
       }
       @media screen and (min-width: $w-desktop) {
-        display: none;
+        left: -87px;
+        width: 30px;
+        height: 30px;
+        background-size: 13px 21px;
       }
     }
   }

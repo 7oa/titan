@@ -9,8 +9,8 @@ block title
 block content
 	.workarea
 		.page-objects
-			.container
-				.page-head
+			.page-head
+				.container
 					.breadcrumbs
 						a._item(href="#") Главная
 						span._item /
@@ -19,61 +19,123 @@ block content
 
 			.page-body
 				.object-bl
-					.object-ttl Торговая недвижимость
+					.object-ttl
+						._h Торговая недвижимость
 					.object-list
-						a.object(href="#")
-							._cnt
-								._img(style="background-image:url('images/tn1.png')")
-								._ttl ТРК «Титан-Арена»
-								._desctiption
-									._desctiption-bl.
-										Воскресенская, 20<br>
-										Открыт: 12 декабря 2014
-									._desctiption-bl.
-										Торгово-развлекательный<br>
-										центр, 5 этажей
-									._desctiption-bl.
-										Общая площадь:<br>
-										38 000 кв2
-									._desctiption-bl.
-										Парковка:<br>
-										650 машиномест
-						a.object(href="#")
-							._cnt
-								._img(style="background-image:url('images/tn2.png')")
-								._ttl ТРК «Титан-Арена»
-								._desctiption
-									._desctiption-bl.
-										Воскресенская, 20<br>
-										Открыт: 12 декабря 2014
-									._desctiption-bl.
-										Торгово-развлекательный<br>
-										центр, 5 этажей
-									._desctiption-bl.
-										Общая площадь:<br>
-										38 000 кв2
-									._desctiption-bl.
-										Парковка:<br>
-										650 машиномест
-						a.object(href="#")
-							._cnt
-								._img(style="background-image:url('images/tn3.png')")
-								._ttl ТРК «Титан-Арена»
-								._desctiption
-									._desctiption-bl.
-										Воскресенская, 20<br>
-										Открыт: 12 декабря 2014
-									._desctiption-bl.
-										Торгово-развлекательный<br>
-										центр, 5 этажей
-									._desctiption-bl.
-										Общая площадь:<br>
-										38 000 кв2
-									._desctiption-bl.
-										Парковка:<br>
-										650 машиномест
-				div
-					div Офисная недвижимость
-					div
+						- for (var i=0;i<2;i++)
+							.object-item
+								a.object(href="#")
+									._cnt
+										._img(style="background-image:url('images/tn1.png')")
+										._ttl ТРК «Титан-Арена»
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
+							.object-item
+								a.object(href="#")
+									._cnt
+										._img(style="background-image:url('images/tn2.png')")
+										._ttl ТРК «Титан-Арена»
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
+							.object-item
+								a.object(href="#")
+									._cnt
+										._img(style="background-image:url('images/tn3.png')")
+										._ttl ТРК «Титан-Арена»
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
+
+				.object-bl
+					.object-ttl
+						._h Офисная недвижимость
+					.object-list
+						- for (var i=0;i<1;i++)
+							.object-item
+								a.object(href="#")
+									._cnt
+										._img(style="background-image:url('images/of1.png')")
+										._ttl ТРК «Титан-Арена»
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
+							.object-item
+								a.object(href="#")
+									._cnt
+										._img(style="background-image:url('images/of2.png')")
+										._ttl ТРК «Титан-Арена»
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
+							.object-item
+								a.object(href="#")
+									._cnt
+										._img(style="background-image:url('images/of3.png')")
+										._ttl ТРК «Титан-Арена»
+										._desctiption
+											._desctiption-bl.
+												Воскресенская, 20<br>
+												Открыт: 12 декабря 2014
+											._desctiption-bl.
+												Торгово-развлекательный<br>
+												центр, 5 этажей
+											._desctiption-bl.
+												Общая площадь:<br>
+												38 000 кв2
+											._desctiption-bl.
+												Парковка:<br>
+												650 машиномест
 
 	//end workarea
