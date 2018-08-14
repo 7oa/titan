@@ -13,6 +13,12 @@
 @import "plugins/sly";
 @import "plugins/iziModal";
 
+@import "plugins/datepicker/_datepicker-config";
+@import "plugins/datepicker/cell";
+@import "plugins/datepicker/datepicker";
+@import "plugins/datepicker/navigation";
+@import "plugins/datepicker/timepicker";
+
 @import "blocks/header-menu";
 @import "blocks/burger-icon";
 @import "blocks/slider-index-sm";
@@ -24,9 +30,12 @@
 @import "blocks/principles";
 @import "blocks/object";
 @import "blocks/contacts-employees";
+@import "blocks/pagination";
+@import "blocks/news";
 
 @import "pages/index";
 @import "pages/page404";
 @import "pages/about";
 @import "pages/objects";
 @import "pages/contacts";
+@import "pages/news";

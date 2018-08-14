@@ -1,0 +1,59 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Новости';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page-news
+			.container
+				.page-head
+					.breadcrumbs
+						a._item(href="#") Главная
+						span._item /
+						span._item=activeMenu
+					.page-topline
+						.page-ttl=activeMenu
+						.page-filtr
+							.select-obj.-news
+								._selected.js-select Все объекты
+								._list
+									a._option.-all(href="#") все объекты
+									- for(var i=0;i<2;i++)
+										a._option(href="#") ТРК «Титан Арена»
+										a._option(href="#") Центральный универмаг
+										a._option(href="#") Торговый центр «Премьер»
+										a._option(href="#") Магазин «Светлана»
+										a._option(href="#") Магазин «Олимп»
+										a._option(href="#") Бизнес-центр на Поморской, 7
+										a._option(href="#") Бизнес-центр на Поморской, 5
+										a._option(href="#") Бизнес-центр «Айсберг»
+										a._option(href="#") Гостиница «Двина»
+							.select-date.-news
+								input._input.js-calendar-input(type="text")
+								button._calendar.js-calendar Календарь
+							a.some-link.-news(href="#")
+								span Публикации в СМИ
+
+
+			.page-body
+				.container
+					.news
+						._list
+							- for (var i=0; i<10; i++)
+								._item
+									a._img(href="#" style="background-image:url('https://picsum.photos/600')")
+										._date
+											._date-d 20
+											._date-m дек
+									a._ttl(href="#") В бильярдном клубе «Аристократ» состоялся бильярдный турнир
+									._prev.
+										9 декабря на территории бильярдного клуба «Аристократ» в ТРК «Титан Арена» прошел бильярдный турнир по «комбинированной пирамиде». Здесь собрались поистине короли бильярда. По мнению участников и гостей ...
+									a._more(href="#") Читать полностью
+						._pagination
+							include blocks/_pagination
+
+	//end workarea

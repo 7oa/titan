@@ -173,6 +173,23 @@ $(document).ready(function() {
         $("#phone").mask("+7 999 999 99 99");
     }
 
+    //календарь
+    $('.js-calendar').on('click',function(){
+        var dp = $('.js-calendar-input')
+            .datepicker({
+                view: 'months',
+                minView: 'months',
+                autoClose: true,
+                position: "bottom right"
+            })
+            .data('datepicker');
+        dp.show();
+    });
+
+    $('.js-select').click(function(){
+        $(this).next().slideToggle();
+    });
+
 });
 $(window).on('resize', function(){
     $('.principles-slider').slick('resize');

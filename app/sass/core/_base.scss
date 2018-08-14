@@ -197,6 +197,26 @@ button{
     }
   }
 }
+.page-topline{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: $w-desktop) {
+    justify-content: flex-start;
+  }
+}
+.page-filtr{
+  padding-top: 38px;
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+    padding-top: 0;
+  }
+  @media screen and (min-width: $w-desktop) {
+    align-items: center;
+  }
+}
 .ttl-center{
   font-family: Gilroy, sans-serif;
   font-weight: $extra-bold;
