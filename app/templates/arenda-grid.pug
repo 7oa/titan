@@ -1,0 +1,57 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Аренда';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page-arenda
+			.page-head
+				.container
+					.breadcrumbs
+						a._item(href="#") Главная
+						span._item /
+						span._item=activeMenu
+					.page-ttl=activeMenu
+
+			.page-filtr Фильтры
+			.page-body
+				.container
+					.arenda
+						._tumblr
+							a._tumblr-grid.active(href="arenda-grid.html")
+							a._tumblr-list(href="arenda-list.html")
+						._sort сортировка
+						._list
+							- for (var i=0; i<10; i++)
+								._item
+									._head
+										a._img(href="#" style="background-image:url('https://picsum.photos/500')")
+											._ttl Большое  торговое помещение на 3 этаже Титан-Арена
+										._inf
+											._inf-price
+												._inf-price1 198 000 Р
+												._inf-price2 месяц
+											._inf-size 200 м<sup>2</sup>
+									._prev
+										._prev-row
+											._prev-c1
+												span тип
+											._prev-c2 Тоговое помещение
+										._prev-row
+											._prev-c1
+												span этаж
+											._prev-c2 3 этаж
+										._prev-row
+											._prev-c1
+												span адрес
+											._prev-c2
+												a(href="#") Титан арена<br>Воскресенская, 20
+									a._more(href="#") Подробнее
+
+						._pagination
+							include blocks/_pagination
+	//end workarea

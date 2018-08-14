@@ -1,0 +1,13 @@
+.page-arenda{
+  padding-bottom: 90px;
+  .page-head{
+    @media screen and (min-width: $w-desktop) {
+      background-image: url('images/bg2.png');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  }
+}
