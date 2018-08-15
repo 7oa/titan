@@ -6,6 +6,7 @@
 //= plugins/_iziModal.min.js
 //= plugins/_jquery.maskedinput.min.js
 //= plugins/_datepicker.min.js
+//= plugins/_jquery-ui.min.js
 
 //Scripts
 //= scripts/script.js

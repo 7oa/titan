@@ -12,6 +12,7 @@
 @import "plugins/slick";
 @import "plugins/sly";
 @import "plugins/iziModal";
+@import "plugins/jquery-ui.min";
 
 @import "plugins/datepicker/_datepicker-config";
 @import "plugins/datepicker/cell";
@@ -33,6 +34,7 @@
 @import "blocks/pagination";
 @import "blocks/news";
 @import "blocks/arenda";
+@import "blocks/filtr";
 
 @import "pages/index";
 @import "pages/page404";

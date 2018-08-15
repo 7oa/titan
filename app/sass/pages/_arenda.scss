@@ -1,6 +1,10 @@
 .page-arenda{
   padding-bottom: 90px;
   .page-head{
+    padding-top: 22px;
+    @media screen and (min-width: $w-tablet) {
+
+    }
     @media screen and (min-width: $w-desktop) {
       background-image: url('images/bg2.png');
       background-repeat: no-repeat;
@@ -9,5 +13,43 @@
       padding-top: 60px;
       padding-bottom: 40px;
     }
+  }
+}
+.sort{
+  @media screen and (min-width: $w-desktop) {
+    display: flex;
+    padding-bottom: 5px;
+  }
+  &__item{
+    @media screen and (min-width: $w-desktop) {
+      font-family: Lato, sans-serif;
+      font-weight: $medium;
+      font-size: 12px;
+      line-height: 24px;
+      margin-right: 35px;
+      color: $gray-4e;
+    }
+    span{
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.arenda-ttl{
+  display: flex;
+  justify-content: space-between;
+}
+.fltr-btn{
+  width: 45px;
+  height: 45px;
+  background-image: url('images/filter-icon.png');
+  @include bg-img(contain);
+  margin-right: 10px;
+  @media screen and (min-width: $w-tablet) {
+    margin-right: 20px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    display: none;
   }
 }

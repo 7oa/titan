@@ -15,16 +15,29 @@ block content
 						a._item(href="#") Главная
 						span._item /
 						span._item=activeMenu
-					.page-ttl=activeMenu
+					.arenda-ttl
+						.page-ttl=activeMenu
+						button.fltr-btn.js-open-filtr(type="button")
 
-			.page-filtr Фильтры
+			.filtr-line
+				include blocks/_filtr
 			.page-body
 				.container
 					.arenda
 						._tumblr
 							a._tumblr-grid.active(href="arenda-grid.html")
 							a._tumblr-list(href="arenda-list.html")
-						._sort сортировка
+						._sort
+							.sort
+								a._item(href="#")
+									span Стоимость аренды
+									i.fas.fa-sort
+								a._item(href="#")
+									span Общая площадь
+									i.fas.fa-sort
+								a._item(href="#")
+									span Актуальность
+									i.fas.fa-sort
 						._list
 							- for (var i=0; i<10; i++)
 								._item

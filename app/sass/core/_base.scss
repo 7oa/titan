@@ -8,6 +8,9 @@ body {
   height: 100%;
   min-width: $w-mobile;
   font-family: 'Lato', sans-serif;
+  &.hidden{
+    overflow: hidden;
+  }
 }
 .content {
   flex: 1 0 auto;

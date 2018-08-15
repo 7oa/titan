@@ -1,0 +1,133 @@
+.filtr.js-filtr
+    ._body
+        ._close.js-filtr-close
+        ._ttl Фильтры
+
+        ._line1
+            ._select-bl
+                ._select-ttl Город
+                ._select
+                    .select.select-desktop
+                        ._selected.js-select Выбрать город
+                        ._list
+                            ._option.-all Все
+                            ._option Архангельск
+                            ._option Новодвинск
+            ._select-bl
+                ._select-ttl Тип
+                ._select
+                    .select.select-desktop
+                        ._selected.js-select Выбрать тип
+                        ._list
+                            ._option.-all Все
+                            ._option Торговое помещение
+                            ._option Офис
+                            ._option Складское помещение
+            ._select-bl
+                ._select-ttl Объекты
+                ._select
+                    .select
+                        ._selected.js-select Выбрать объект
+                        ._list
+                            ._option.-all
+                                input._checkbox#obj1(type="checkbox")
+                                label._checkbox-label(for="obj1") Все объекты
+                            ._option
+                                input._checkbox#obj2(type="checkbox")
+                                label._checkbox-label(for="obj2") ТРК «Титан Арена»
+                            ._option
+                                input._checkbox#obj3(type="checkbox")
+                                label._checkbox-label(for="obj3") Центральный универмаг
+                            ._option
+                                input._checkbox#obj4(type="checkbox")
+                                label._checkbox-label(for="obj4") Торговый центр «Премьер»
+        ._line2
+            ._range-bl
+                ._range-ttl Стоимость аренды (месяц)
+                ._range-obj
+                    input#range-price(type="hidden")
+                    #slider-range-price._range(data-min="27000" data-max="350000" data-val1="55000" data-val2="300000")
+                ._range-val
+                    ._range-label от
+                    ._range-inp#range-price-min
+                    ._range-label до
+                    ._range-inp#range-price-max
+            ._range-bl
+                ._range-ttl Этаж
+                ._range-obj
+                    input#range-floor(type="hidden")
+                    #slider-range-floor._range(data-min="0" data-max="14" data-val1="0" data-val2="14")
+                ._range-val
+                    ._range-label от
+                    ._range-inp#range-floor-min
+                    ._range-label до
+                    ._range-inp#range-floor-max
+            ._range-bl
+                ._range-ttl Общая площадь, м<sup>2</sup>
+                ._range-obj
+                    input#range-size(type="hidden")
+                    #slider-range-size._range(data-min="12" data-max="350" data-val1="12" data-val2="350")
+                ._range-val
+                    ._range-label от
+                    ._range-inp#range-size-min
+                    ._range-label до
+                    ._range-inp#range-size-max
+            button._submit(type="submit") Применить
+
+script.
+    //input type="range"
+    var rangePrice = $("#slider-range-price");
+    var rangeFloor = $("#slider-range-floor");
+    var rangeSize = $("#slider-range-size");
+
+    rangePrice.slider({
+        range: true,
+        min: rangePrice.data('min'),
+        max: rangePrice.data('max'),
+        values: [ rangePrice.data('val1'), rangePrice.data('val2') ],
+        create: function () {
+            var min = $(this).slider("values", 0);
+            var max = $(this).slider("values", 1);
+            changeVal("price", min, max);
+        },
+        slide: function (event, ui) {
+            changeVal("price", ui.values[0], ui.values[1]);
+        }
+    });
+    rangeFloor.slider({
+        range: true,
+        min: rangeFloor.data('min'),
+        max: rangeFloor.data('max'),
+        values: [rangeFloor.data('val1'), rangeFloor.data('val2')],
+        create: function () {
+            var min = $(this).slider("values", 0);
+            var max = $(this).slider("values", 1);
+            changeVal("floor", min, max);
+        },
+        slide: function (event, ui) {
+            changeVal("floor", ui.values[0], ui.values[1]);
+        }
+    });
+    rangeSize.slider({
+        range: true,
+        min: rangeSize.data('min'),
+        max: rangeSize.data('max'),
+        values: [rangeSize.data('val1'), rangeSize.data('val2')],
+        create: function () {
+            var min = $(this).slider("values", 0);
+            var max = $(this).slider("values", 1);
+            changeVal("size", min, max);
+        },
+        slide: function (event, ui) {
+            changeVal("size", ui.values[0], ui.values[1]);
+        }
+    });
+
+    function changeVal(param, min, max) {
+        var value = min + " - " + max;
+        $("#range-" + param).val(value);
+        $("#range-" + param + "-min").text(min);
+        $("#range-" + param + "-max").text(max);
+
+    }
+

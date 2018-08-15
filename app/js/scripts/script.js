@@ -190,6 +190,15 @@ $(document).ready(function() {
         $(this).next().slideToggle();
     });
 
+    $('.js-open-filtr').click(function(){
+        $('.js-filtr').fadeIn();
+        $('.wrapper').addClass('hidden');
+    });
+    $('.js-filtr-close').click(function(){
+        $('.js-filtr').fadeOut();
+        $('.wrapper').removeClass('hidden');
+    });
+
 });
 $(window).on('resize', function(){
     $('.principles-slider').slick('resize');

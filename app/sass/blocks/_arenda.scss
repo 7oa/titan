@@ -1,5 +1,5 @@
 .arenda{
-  padding-top: 35px;
+  padding-top: 30px;
   @media screen and (min-width: $w-tablet) {
     overflow: hidden;
   }
@@ -13,7 +13,7 @@
       display: block;
       position: absolute;
       right: 0;
-      top: 0;
+      top: 88px;
       background-color: $white;
       box-shadow: $shadow-gray;
       padding: 20px;
@@ -45,6 +45,9 @@
     display: none;
     @media screen and (min-width: $w-desktop) {
       display: block;
+      width: 1100px;
+      border-bottom: 1px solid $gray-e4;
+      margin-bottom: 25px;
     }
   }
   &__list{
