@@ -215,5 +215,124 @@
   }
 }
 .arenda-list{
-
+  width: 1100px;
+  &__item{
+    display: flex;
+    background-color: $white;
+    box-shadow: $shadow-gray;
+    margin-bottom: 50px;
+    height: 255px;
+    overflow: hidden;
+  }
+  &__img{
+    display: block;
+    @include bg-img(cover);
+    width: 300px;
+    height: 255px;
+    flex: 0 0 auto;
+  }
+  &__body{
+    padding: 30px 25px 10px 55px;
+    flex: 1 1 auto;
+  }
+  &__ttl{
+    font-size: 24px;
+    line-height: 24px;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    color: $gray-41;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  &__cnt{
+    border-top: 1px solid $gray-e4;
+    padding-top: 20px;
+    display: flex;
+  }
+  &__inf{
+    color: $bordo-a9;
+  }
+  &__inf-price{
+    margin-bottom: 10px;
+  }
+  &__inf-price1{
+    font-size: 24px;
+    line-height: 1;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    margin-bottom: 5px;
+  }
+  &__inf-price2{
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &__inf-size{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  &__more{
+    display: block;
+    background-color: $bordo-a9;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 16px;
+    height: 43px;
+    line-height: 43px;
+    letter-spacing: 1.5px;
+    transition: .5s;
+    &:hover{
+      @media screen and (min-width: $w-desktop) {
+        box-shadow: $shadow-bordo;
+      }
+    }
+    &:focus{
+      @media screen and (min-width: $w-desktop) {
+        background-color: $bordo-de;
+      }
+    }
+  }
+  &__prev{
+    width: 430px;
+    margin-right: 75px;
+    flex: 0 0 auto;
+    color: $gray-4e;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    a{
+      color: $bordo-a9;
+      border-bottom: 1px solid $bordo-a9;
+      &:hover{
+        border-color: transparent;
+      }
+    }
+  }
+  &__prev2{
+    flex: 1 1 auto;
+  }
+  &__prev-row{
+    display: flex;
+  }
+  &__prev-c1{
+    flex: 1 1 auto;
+    span{
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px dotted $gray-4e;
+    }
+  }
+  &__prev-c2{
+    text-align: right;
+  }
 }
