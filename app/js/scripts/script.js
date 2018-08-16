@@ -187,6 +187,7 @@ $(document).ready(function() {
     });
 
     $('.js-select').click(function(){
+        $(this).parent().toggleClass('open');
         $(this).next().slideToggle();
     });
 
@@ -204,4 +205,13 @@ $(window).on('resize', function(){
     $('.principles-slider').slick('resize');
     $('.employees-slider').slick('resize');
     $('.contacts-employees-slider').slick('resize');
+});
+$(document).mouseup(function (e){
+    var filtr = $('.select.open');
+    if (!filtr.is(e.target)
+        && filtr.has(e.target).length === 0) {
+        setTimeout(function () {
+            filtr.removeClass('open').children('.select__list').slideUp();
+        }, 50);
+    }
 });

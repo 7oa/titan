@@ -21,6 +21,9 @@
       display: flex;
       justify-content: space-between;
     }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 14px;
+    }
   }
   &__line2{
     @media screen and (min-width: $w-tablet) {
@@ -45,7 +48,7 @@
     @media screen and (min-width: $w-desktop) {
       max-width: $w-desktop;
       margin: 0 auto;
-      padding: 30px 0 35px;
+      padding: 27px 0 18px;
       overflow: unset;
       width: auto;
       height: auto;
@@ -90,7 +93,7 @@
       width: 48%;
     }
     @media screen and (min-width: $w-desktop) {
-      width: 20%;
+      width: 23%;
     }
   }
   &__range{
@@ -131,6 +134,10 @@
     line-height: 25px;
     margin-bottom: 20px;
     color: $gray-41;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
   &__range-label{
     font-family: Lato, sans-serif;
@@ -162,6 +169,7 @@
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    transition: .5s;
     @media screen and (min-width: $w-tablet) {
       width: 48%;
     }
@@ -179,11 +187,28 @@
       }
     }
   }
+  &__select-dt{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      padding-top: 9px;
+    }
+  }
+  &__select{
+    &_dt{
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
+    }
+  }
   &__select-bl{
     margin-bottom: 15px;
     @media screen and (min-width: $w-tablet) {
       width: 30%;
       flex: 0 0 auto;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: auto;
     }
   }
   &__select-label{
@@ -375,30 +400,57 @@
     background: $bordo-a9;
   }
 }
-
-.select-desktop{
-  @media screen and (min-width: $w-desktop) {}
-  .select__selected{
-    @media screen and (min-width: $w-desktop) {
-      display: none;
+.select-dt{
+  display: flex;
+  &__option{
+    color: $bordo-a9;
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    position: relative;
+    padding: 0 15px;
+    line-height: 32px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: .5s;
+    span{
+      position: relative;
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transform: skew(-20deg);
+      border: 2px solid $bordo-c1;
+      transition: .5s;
     }
   }
-  .select__list{
+  &__del{
+    width: 16px;
+    height: 16px;
+    background-image: url('images/del.png');
+    display: none;
+    cursor: pointer;
+  }
+  &__item{
     display: flex;
-  }
-  .select__option{
-    @media screen and (min-width: $w-desktop) {
-
-    }
-    &_all{
-      @media screen and (min-width: $w-desktop) {
-        display: none;
+    align-items: center;
+    margin-right: 10px;
+    &.selected{
+      .select-dt__option{
+        color: $white;
+        &:before {
+          background-color: $bordo-a9;
+        }
+      }
+      .select-dt__del{
+        display: block;
       }
     }
   }
-  &:after{
-    @media screen and (min-width: $w-desktop) {
-      display: none;
-    }
-  }
+
 }

@@ -3,76 +3,109 @@
         ._close.js-filtr-close
         ._ttl Фильтры
 
-        ._line1
-            ._select-bl
-                ._select-ttl Город
-                ._select
-                    .select.select-desktop
-                        ._selected.js-select Выбрать город
-                        ._list
-                            ._option.-all Все
-                            ._option Архангельск
-                            ._option Новодвинск
-            ._select-bl
-                ._select-ttl Тип
-                ._select
-                    .select.select-desktop
-                        ._selected.js-select Выбрать тип
-                        ._list
-                            ._option.-all Все
-                            ._option Торговое помещение
-                            ._option Офис
-                            ._option Складское помещение
-            ._select-bl
-                ._select-ttl Объекты
-                ._select
-                    .select
-                        ._selected.js-select Выбрать объект
-                        ._list
-                            ._option.-all
-                                input._checkbox#obj1(type="checkbox")
-                                label._checkbox-label(for="obj1") Все объекты
-                            ._option
-                                input._checkbox#obj2(type="checkbox")
-                                label._checkbox-label(for="obj2") ТРК «Титан Арена»
-                            ._option
-                                input._checkbox#obj3(type="checkbox")
-                                label._checkbox-label(for="obj3") Центральный универмаг
-                            ._option
-                                input._checkbox#obj4(type="checkbox")
-                                label._checkbox-label(for="obj4") Торговый центр «Премьер»
-        ._line2
-            ._range-bl
-                ._range-ttl Стоимость аренды (месяц)
-                ._range-obj
-                    input#range-price(type="hidden")
-                    #slider-range-price._range(data-min="27000" data-max="350000" data-val1="55000" data-val2="300000")
-                ._range-val
-                    ._range-label от
-                    ._range-inp#range-price-min
-                    ._range-label до
-                    ._range-inp#range-price-max
-            ._range-bl
-                ._range-ttl Этаж
-                ._range-obj
-                    input#range-floor(type="hidden")
-                    #slider-range-floor._range(data-min="0" data-max="14" data-val1="0" data-val2="14")
-                ._range-val
-                    ._range-label от
-                    ._range-inp#range-floor-min
-                    ._range-label до
-                    ._range-inp#range-floor-max
-            ._range-bl
-                ._range-ttl Общая площадь, м<sup>2</sup>
-                ._range-obj
-                    input#range-size(type="hidden")
-                    #slider-range-size._range(data-min="12" data-max="350" data-val1="12" data-val2="350")
-                ._range-val
-                    ._range-label от
-                    ._range-inp#range-size-min
-                    ._range-label до
-                    ._range-inp#range-size-max
-            button._submit(type="submit") Применить
+        form
+            ._line1
+                ._select-bl
+                    ._select-ttl Город
+                    ._select-dt
+                        .select-dt
+                            label._item.js-arenda-opt(for="city1")
+                                ._option
+                                    span Архангельск
+                                ._del.js-arenda-del
+                            label._item.js-arenda-opt(for="city2")
+                                ._option
+                                    span Новодвинск
+                                ._del.js-arenda-del
+                    ._select.-dt
+                        .select
+                            ._selected.js-select Выбрать город
+                            ._list
+                                ._option
+                                    input._checkbox#city1(type="checkbox")
+                                    label._checkbox-label(for="city1") Архангельск
+                                ._option
+                                    input._checkbox#city2(type="checkbox")
+                                    label._checkbox-label(for="city2") Новодвинск
+                ._select-bl
+                    ._select-ttl Тип
+                    ._select-dt
+                        .select-dt
+                            label._item.js-arenda-opt(for="type1")
+                                ._option
+                                    span Торговое помещение
+                                ._del.js-arenda-del
+                            label._item.js-arenda-opt(for="type2")
+                                ._option
+                                    span Офис
+                                ._del.js-arenda-del
+                            label._item.js-arenda-opt(for="type3")
+                                ._option
+                                    span Складское помещение
+                                ._del.js-arenda-del
+                    ._select.-dt
+                        .select
+                            ._selected.js-select Выбрать тип
+                            ._list
+                                ._option
+                                    input._checkbox#type1(type="checkbox")
+                                    label._checkbox-label(for="type1") Торговое помещение
+                                ._option
+                                    input._checkbox#type2(type="checkbox")
+                                    label._checkbox-label(for="type2") Офис
+                                ._option
+                                    input._checkbox#type3(type="checkbox")
+                                    label._checkbox-label(for="type3") Складское помещение
+                ._select-bl
+                    ._select-ttl Объекты
+                    ._select
+                        .select
+                            ._selected.js-select Выбрать объект
+                            ._list
+                                ._option.-all
+                                    input._checkbox#obj1(type="checkbox")
+                                    label._checkbox-label(for="obj1") Все объекты
+                                ._option
+                                    input._checkbox#obj2(type="checkbox")
+                                    label._checkbox-label(for="obj2") ТРК «Титан Арена»
+                                ._option
+                                    input._checkbox#obj3(type="checkbox")
+                                    label._checkbox-label(for="obj3") Центральный универмаг
+                                ._option
+                                    input._checkbox#obj4(type="checkbox")
+                                    label._checkbox-label(for="obj4") Торговый центр «Премьер»
+            ._line2
+                ._range-bl
+                    ._range-ttl Стоимость аренды (месяц)
+                    ._range-obj
+                        input#range-price(type="hidden")
+                        #slider-range-price._range(data-min="27000" data-max="350000" data-val1="55000" data-val2="300000")
+                    ._range-val
+                        ._range-label от
+                        ._range-inp#range-price-min
+                        ._range-label до
+                        ._range-inp#range-price-max
+                ._range-bl
+                    ._range-ttl Этаж
+                    ._range-obj
+                        input#range-floor(type="hidden")
+                        #slider-range-floor._range(data-min="0" data-max="14" data-val1="0" data-val2="14")
+                    ._range-val
+                        ._range-label от
+                        ._range-inp#range-floor-min
+                        ._range-label до
+                        ._range-inp#range-floor-max
+                ._range-bl
+                    ._range-ttl Общая площадь, м<sup>2</sup>
+                    ._range-obj
+                        input#range-size(type="hidden")
+                        #slider-range-size._range(data-min="12" data-max="350" data-val1="12" data-val2="350")
+                    ._range-val
+                        ._range-label от
+                        ._range-inp#range-size-min
+                        ._range-label до
+                        ._range-inp#range-size-max
+                button._submit(type="submit") Применить
 
 script.
     //input type="range"
@@ -130,4 +163,19 @@ script.
         $("#range-" + param + "-max").text(max);
 
     }
+
+    $('.js-arenda-opt').click(function () {
+        var attr = $(this).attr('for');
+        /*var checked = $('#'+attr).prop('checked');
+        console.log(checked);
+        if(checked) $(this).addClass('selected');
+        else $(this).removeClass('selected');*/
+    });
+
+    $('.select__checkbox').change(function(){
+        var selectID = $(this).attr('id');
+        var selectCheck = $(this).prop('checked');
+        if(selectCheck) $('.js-arenda-opt[for="'+selectID+'"]').addClass('selected');
+        else $('.js-arenda-opt[for="' + selectID + '"]').removeClass('selected');
+    });
 
