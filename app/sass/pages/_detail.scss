@@ -1,0 +1,295 @@
+.page-detail{
+  padding-top: 27px;
+}
+.page-detail-ttl{
+  padding-bottom: 30px;
+  @media screen and (min-width: $w-tablet) {
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-ttl{
+    margin-bottom: 20px;
+  }
+}
+.back-to{
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: skew(-20deg);
+    background-color: $bordo-c1;
+    transition: .5s;
+  }
+  span{
+    color: $white;
+    position: relative;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 23px;
+    text-transform: uppercase;
+  }
+}
+.detail-content{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+
+  }
+}
+.detail-txt{
+  color: $gray-4e;
+  font-family: Lato, sans-serif;
+  font-weight: $medium;
+  font-size: 14px;
+  line-height: 23px;
+  @media screen and (min-width: $w-tablet) {
+    font-size: 12px;
+    line-height: 18px;
+    flex: 1 1 auto;
+  }
+  @media screen and (min-width: $w-desktop) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  p{
+    margin-bottom: 30px;
+  }
+  a{
+    color: $bordo-a9;
+    border-bottom: 1px solid $bordo-a9;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.detail-plan{
+  background-color: $white;
+  box-shadow: $shadow-gray;
+  width: 100%;
+  margin-bottom: 80px;
+  padding: 45px 10px 40px;
+  box-sizing: border-box;
+  @media screen and (min-width: $w-tablet) {
+    width: 310px;
+    margin-bottom: 0;
+    flex: 0 0 auto;
+    margin-left: 20px;
+    order: 1;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 460px;
+  }
+  &__ttl{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 23px;
+    line-height: 1;
+    margin-bottom: 30px;
+    color: $gray-4e;
+    text-align: center;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 18px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+    }
+  }
+  &__img{
+    width: 100%;
+    text-align: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.detail-map-bl{
+  position: relative;
+  margin-bottom: 50px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    margin-bottom: 60px;
+  }
+  &__map{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    @media screen and (min-width: $w-tablet) {
+      height: 300px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 460px;
+    }
+  }
+  &__container{
+    position: relative;
+    width: 100%;
+    background-color: $bordo-a9;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    background-image: url('images/bg3.png');
+    background-repeat: repeat;
+    background-position: center top;
+    @media screen and (min-width: $w-tablet) {
+      width: 340px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 550px;
+
+    }
+  }
+  &__inf-bl{
+    color: $white;
+  }
+  &__inf-bl{
+    margin-bottom: 10px;
+  }
+  &__inf-ttl{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 18px;
+    line-height: 24px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  &__inf-contacts{
+    font-family: Lato, sans-serif;
+    font-weight: $regular;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 10px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 22px;
+      line-height: 36px;
+    }
+  }
+}
+.arenda-head{
+  width: 100%;
+  @media screen and (min-width: $w-tablet) {
+    position: relative;
+    display: flex;
+  }
+  &__img{
+    width: 100%;
+    height: 250px;
+    @include bg-img(cover);
+    @media screen and (min-width: $w-tablet) {
+      height: 330px;
+      width: 70%;
+      flex: 0 0 auto;
+    }
+  }
+  &__inf{
+    background-color: $white;
+    padding: 20px 30px 30px;
+    @media screen and (min-width: $w-tablet) {
+      flex: 1 1 auto;
+      position: relative;
+    }
+  }
+  &__btn{
+    background-color: $bordo-a9;
+    width: 100%;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 13px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: $white;
+    @media screen and (min-width: $w-tablet) {
+      position: absolute;
+      bottom: 30px;
+      left: -50px;
+
+    }
+  }
+  &__inf-list{
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+  }
+  &__inf-ttl{
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $bordo-a9;
+    width: 50%;
+    flex: 0 0 auto;
+    order: 2;
+  }
+  &__inf-bl{
+    margin-bottom: 13px;
+    width: 50%;
+    flex: 0 0 auto;
+    order: 2;
+    &:nth-child(2){
+      order: 1;
+    }
+  }
+  &__inf-sz{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 25px;
+    line-height: 25px;
+    color: $bordo-a9;
+    .from{
+      color: $gray-ce;
+      font-size: 18px;
+    }
+  }
+  &__inf-lb{
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 11px;
+    line-height: 24px;
+    color: $bordo-a9;
+    text-transform: uppercase;
+  }
+}
+.detail-gallery{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  &__item{
+    width: 145px;
+    height: 145px;
+    @include bg-img(cover);
+    display: block;
+    margin-bottom: 15px;
+  }
+}

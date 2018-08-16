@@ -125,6 +125,32 @@ $(document).ready(function() {
             ]
         });
     }
+
+    //слайдер объектры
+    $('.obj-more').slick({
+        dots: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
     if (window.matchMedia('(min-width: 680px)').matches) {
         $('.contacts-employees-slider').slick({
             dots: true,
@@ -199,6 +225,9 @@ $(document).ready(function() {
         $('.js-filtr').fadeOut();
         $('.wrapper').removeClass('hidden');
     });
+
+    //галлерея
+    $('.gallery a').simpleLightbox();
 
 });
 $(window).on('resize', function(){

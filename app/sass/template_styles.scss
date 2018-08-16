@@ -13,6 +13,7 @@
 @import "plugins/sly";
 @import "plugins/iziModal";
 @import "plugins/jquery-ui.min";
+@import "plugins/simplelightbox";
 
 @import "plugins/datepicker/_datepicker-config";
 @import "plugins/datepicker/cell";
@@ -35,6 +36,8 @@
 @import "blocks/news";
 @import "blocks/arenda";
 @import "blocks/filtr";
+@import "blocks/object-one";
+@import "blocks/obj-more";
 
 @import "pages/index";
 @import "pages/page404";
@@ -43,3 +46,4 @@
 @import "pages/contacts";
 @import "pages/news";
 @import "pages/arenda";
+@import "pages/detail";

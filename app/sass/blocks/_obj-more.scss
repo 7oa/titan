@@ -1,0 +1,83 @@
+.obj-more{
+  position: relative;
+  padding-bottom: 160px;
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 70px;
+  }
+  &__item{
+
+  }
+  .slick-arrow{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    background-image: url('images/arr-bordo.png');
+    @include bg-img(cover);
+    bottom: 35px;
+    font-size: 0;
+    line-height: 0;
+    z-index: 1;
+    @media screen and (min-width: $w-desktop) {
+      border: 2px solid $bordo-a9;
+      background-size: 21px 34px;
+      width: 60px;
+      height: 60px;
+      background-color: $white;
+    }
+    &.slick-prev{
+      transform: rotate(180deg);
+      left: 0;
+      @media screen and (min-width: $w-tablet) {
+        left: 40px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        right: 0;
+        left: auto;
+        top: 100px;
+      }
+    }
+    &.slick-next{
+      right: 0;
+      @media screen and (min-width: $w-tablet) {
+        right: 40px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        right: 0;
+        top: 170px;
+      }
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 35px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    @include uldev();
+    @media screen and (min-width: $w-desktop) {
+
+    }
+    button{
+      font-size: 0;
+      line-height: 0;
+      width: 7px;
+      height: 7px;
+      background-color: $bordo-a9;
+      border-radius: 50%;
+      margin: 10px;
+      transition: .5s;
+      border: 2px solid transparent;
+    }
+    .slick-active{
+      button{
+        width: 12px;
+        height: 12px;
+        margin: 7px;
+        background-color: $white;
+        border-color: $bordo-a9;
+      }
+    }
+  }
+}

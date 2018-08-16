@@ -1,0 +1,95 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Аренда';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.page-detail
+			.page-head
+				.container
+					.breadcrumbs
+						a._item(href="#") Главная
+						span._item /
+						a._item(href="#") Аренда
+						span._item /
+						span._item Офисное помещение на 7 этаже гостиницы «Двина»
+					.page-detail-ttl
+						.page-ttl Офисное помещение на 7 этаже гостиницы «Двина»
+						a.back-to(href="#")
+							span Вернуться к Объектам аренды
+
+			.page-body
+				.detail-photo-bl
+					.arenda-head
+						._img(style="background-image:url('https://picsum.photos/700')")
+						._inf
+							._inf-list
+								._inf-ttl Офисное<br>помещение
+								._inf-bl
+									._inf-sz 29 м<sup>2</sup>
+									._inf-lb общая площадь
+								._inf-bl
+									._inf-sz 49 000 <span class="rub">Ь</span>
+									._inf-lb месяц
+								._inf-bl
+									._inf-sz 7<span class="from">/12</span>
+									._inf-lb этаж
+							button._btn(type="button") Отправить заявку
+					.detail-gallery
+						._list
+							- for(var i=0;i<10;i++)
+								a._item(href="https://picsum.photos/300"+i+"" style="background-image:url('https://picsum.photos/300"+i+"')")
+					.gallery.
+						<a href="images/index-bg1.jpg"><img src="images/index-bg1.jpg" alt="" title="1" style="width:100px;"/></a>
+						<a href="https://picsum.photos/301"><img src="https://picsum.photos/301" alt="" title="2"/></a>
+						<a href="https://picsum.photos/301"><img src="https://picsum.photos/301" alt="" title="3"/></a>
+				.detail-map-bl
+					._map
+						.map#map
+						include blocks/_map
+					._container
+						._inf-bl
+							._inf-ttl Конткатные данные объекта
+							._inf-contacts.
+								Архангельск, Воскресенская, 20<br>
+								8 (981) 551-39-79<br>
+								Администратор ТРЦ
+						._inf-bl
+							._inf-ttl Управляющая компания
+							._inf-contacts.
+								Титан-Девелопмент<br>
+								Архангельск, Поморская, 7<br>
+								(8182) 20-74-85
+				.detail-content-bl
+					.container
+						.detail-content
+							.detail-plan
+								._ttl Планировка помещения
+								._img
+									img(src="images/shem.png")
+
+							.detail-txt
+								p Просторный, светлый офис с ремонтом. Офис оснащен: двумя кабинетами и openspace для сотрудников компании. Панорамное остекление. Круглосуточная система безопасности и контроля посетителей. Высота потолков 2,8 м
+
+								p Ставка не включает переменную часть расходов. Для уточнения всей информации свяжитесь с нами по телефону.
+
+								p Гостиница «Двина» находится в самом сердце Архангельска, на перекрестке транспортных магистралей, рядом с лучшими магазинами, ресторанами, банками, в центре кипучей жизни областного центра. Рядом расположена парковка на 50 автомобилей.
+
+								p.
+									ООО «Титан-Девелопмент» предлагает рассмотреть возможность аренды офисных помещений в гостинице «Двина» по адресу: г. Архангельск, пр. Троицкий, 52.<br>
+									Заявки на аренду принимаются по телефону 207-582, факс 201-945.<br>
+									E-mail: varakina_m@tdevelop.ru. Контактное лицо: Варакина Мария Владимировна.
+
+				.detail-similar-bl
+					.container
+						.bl-ttl Похожие объекты аренды
+						.obj-more
+							- for (var i=0; i<9; i++)
+								._item
+									include blocks/_object
+
+	//end workarea
