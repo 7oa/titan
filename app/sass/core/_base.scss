@@ -116,6 +116,40 @@ button{
     }
   }
 }
+.bl-ttl2{
+  font-family: Gilroy, sans-serif;
+  font-weight: $extra-bold;
+  font-size: 25px;
+  line-height: 31px;
+  @media screen and (min-width: $w-tablet) {
+    font-size: 25px;
+    line-height: 42px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  &:after{
+    content: '';
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    background-color: $bordo-a9;
+    height: 2px;
+    width: 135px;
+    @media screen and (min-width: $w-tablet) {
+      margin-top: 5px;
+      margin-bottom: 29px;
+      width: 120px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-top: 23px;
+      margin-bottom: 32px;
+      height: 3px;
+      width: 140px;
+    }
+  }
+}
 .bl-all{
   font-family: Lato, sans-serif;
   font-weight: $medium;

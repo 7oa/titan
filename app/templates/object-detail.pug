@@ -1,7 +1,7 @@
 extends core/_template
 
 append sharedVars
-	- var activeMenu = 'Аренда';
+	- var activeMenu = 'Объекты';
 
 block title
 	title=activeMenu
@@ -14,32 +14,29 @@ block content
 					.breadcrumbs
 						a._item(href="#") Главная
 						span._item /
-						a._item(href="#") Аренда
+						a._item(href="#") Объекты
 						span._item /
-						span._item Офисное помещение на 7 этаже гостиницы «Двина»
+						span._item Торгово-развлекательный комплекс «Титан Арена»
 					.page-detail-ttl
-						.page-ttl Офисное помещение на 7 этаже гостиницы «Двина»
+						.page-ttl Торгово-развлекательный комплекс «Титан Арена»
 						a.back-to(href="#")
-							span Вернуться к Объектам аренды
+							span Вернуться к объектам
 
 			.page-body
-				.detail-photo-bl
-					.arenda-head
-						._img(style="background-image:url('https://picsum.photos/700')")
+				.detail-photo-bl2
+					.object-head
+						._img(style="background-image:url('https://picsum.photos/600')")
 						._inf
-							._inf-list
-								._inf-ttl Офисное<br>помещение
-								._inf-bl
-									._inf-sz 29 м<sup>2</sup>
-									._inf-lb общая площадь
-								._inf-bl
-									._inf-sz 49 000 <span class="rub">Ь</span>
-									._inf-lb месяц
-								._inf-bl
-									._inf-sz 7<span class="from">/12</span>
-									._inf-lb этаж
-							button._btn(type="button" data-izimodal-open="#order") Отправить заявку
-					.detail-gallery.photo-gallery
+							._link
+								a(href="http://titanarena.ru" target="_blank") titanarena.ru
+							._ss
+								a._ss-item(href="#" target="_blank")
+									i.fab.fa-facebook-f
+								a._ss-item(href="#" target="_blank")
+									i.fab.fa-vk
+								a._ss-item(href="#" target="_blank")
+									i.fab.fa-instagram
+					.detail-gallery2.photo-gallery
 						._list
 							- for(var i=0;i<6;i++)
 								a._item(href="images/TEMP/img1.jpg" style="background-image:url('images/TEMP/img1.jpg')")
@@ -61,13 +58,47 @@ block content
 								Титан-Девелопмент<br>
 								Архангельск, Поморская, 7<br>
 								(8182) 20-74-85
+				.detail-video-bl
+					.video
+						._ttl Видеоролики
+						._full
+							.video-full
+								-for(var i=0;i<3;i++)
+									._item
+										iframe(src="https://www.youtube.com/embed/pu15O9wsa94" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+									._item
+										iframe(src="https://www.youtube.com/embed/9q3I6YhGSPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+									._item
+										iframe(src="https://www.youtube.com/embed/g3EsaymNvEA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+						._prev
+							.video-prev
+								-for(var i=0;i<3;i++)
+									._item
+										._img(style="background-image:url('https://picsum.photos/200')")
+									._item
+										._img(style="background-image:url('https://picsum.photos/201')")
+									._item
+										._img(style="background-image:url('https://picsum.photos/202')")
+				.detail-similar-bl
+					.container
+						.bl-ttl2 Аренда помещений в «Титан Арена»
+						.obj-more
+							- for (var i=0; i<9; i++)
+								._item
+									include blocks/_object
 				.detail-content-bl
 					.container
 						.detail-content
 							.detail-plan
-								._ttl Планировка помещения
-								._img
+								._ttl Схема объекта
+								._img.js-tag-img
 									img(src="images/shem.png")
+								._tags-list
+									._tag.selected.js-tag(data-img="images/shem.png")
+										span 1 этаж
+									- for (var i=2;i<=5;i++)
+										._tag.js-tag(data-img="images/of3.png")
+											span #{i} этаж
 
 							.detail-txt
 								p Просторный, светлый офис с ремонтом. Офис оснащен: двумя кабинетами и openspace для сотрудников компании. Панорамное остекление. Круглосуточная система безопасности и контроля посетителей. Высота потолков 2,8 м
@@ -82,11 +113,14 @@ block content
 									E-mail: varakina_m@tdevelop.ru. Контактное лицо: Варакина Мария Владимировна.
 
 				.detail-similar-bl
-					.container
-						.bl-ttl2 Похожие объекты аренды
-						.obj-more
+					.container.news-more-container
+						.bl-ttl2 Новости объекта
+						.news-more
 							- for (var i=0; i<9; i++)
 								._item
-									include blocks/_object
+									include blocks/_news-one
+						.news-more-all
+							a.all-news(href="#")
+								span все новости объекта
 			include popups/_order
 	//end workarea

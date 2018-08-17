@@ -151,6 +151,34 @@ $(document).ready(function() {
         ]
     });
 
+    //слайдер yjdjcnb
+    $('.news-more').slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    dots: false,
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    dots: false,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
     if (window.matchMedia('(min-width: 680px)').matches) {
         $('.contacts-employees-slider').slick({
             dots: true,
@@ -227,7 +255,50 @@ $(document).ready(function() {
     });
 
     //галлерея
-    $('.detail-gallery a').simpleLightbox();
+    $('.photo-gallery a').simpleLightbox();
+
+    //тэги
+    $('.js-tag').click(function(){
+        var img = $(this).data('img');
+        $('.js-tag-img img').attr('src',img);
+        $(this).addClass('selected').siblings().removeClass('selected');
+    });
+
+    //галерея видео
+    $('.video-full').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        asNavFor: '.video-prev',
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 680,
+                settings: {
+                    arrows: true,
+                    dots: true,
+                    asNavFor: null
+                }
+            }
+        ]
+    });
+    $('.video-prev').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.video-full',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 680,
+                settings: 'unslick'
+            }
+        ]
+    });
 
 });
 $(window).on('resize', function(){

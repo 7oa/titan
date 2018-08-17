@@ -25,6 +25,17 @@
     }
   }
 }
+.detail-photo-bl2{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: $w-desktop;
+    margin: 0 auto 55px;
+  }
+}
 .detail-photo-bl{
   @media screen and (min-width: $w-desktop) {
     width: $w-desktop;
@@ -51,6 +62,7 @@
   position: relative;
   @media screen and (min-width: $w-tablet) {
     height: 27px;
+    flex: 0 0 auto;
   }
   @media screen and (min-width: $w-desktop) {
     height: 32px;
@@ -166,6 +178,48 @@
     box-sizing: border-box;
     img{
       max-width: 100%;
+    }
+  }
+  &__tags-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 280px;
+    margin: 20px auto 0;
+  }
+  &__tag{
+    position: relative;
+    cursor: pointer;
+    color: $bordo-c1;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 3px 10px;
+    padding: 0 15px;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transform: skew(-20deg);
+      background-color: $white;
+      border: 2px solid $bordo-c1;
+      transition: .5s;
+      height: 30px;
+    }
+    span{
+      display: inline-block;
+      position: relative;
+    }
+    &.selected{
+      color: $white;
+      &:before{
+        background-color: $bordo-c1;
+      }
     }
   }
 }
@@ -521,4 +575,421 @@
       }
     }
   }
+}
+.detail-gallery2{
+  @media screen and (min-width: $w-tablet) {
+    width: 225px;
+    flex: 0 0 auto;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 480px;
+    flex: 0 0 auto;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    @media screen and (min-width: $w-tablet) {
+      padding: 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0;
+    }
+  }
+  &__item{
+    width: 49%;
+    height: 145px;
+    @include bg-img(cover);
+    display: block;
+    margin-bottom: 15px;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+      height: 108px;
+      width: 108px;
+      margin-left: 2px;
+      margin-bottom: 2px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 140px;
+      height: 140px;
+      margin-right: 0;
+      margin-left: 19px;
+      margin-bottom: 19px;
+    }
+    &:nth-child(n+7){
+      display: none;
+      @media screen and (min-width: $w-desktop) {
+        display: block;
+      }
+    }
+    &:nth-child(6){
+      &:after{
+        content: 'Все фото';
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(146,4,44,0.47);
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        font-weight: $medium;
+        font-size: 19px;
+        line-height: 24px;
+        color: $white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        box-sizing: border-box;
+        @media screen and (min-width: $w-desktop) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(n+10){
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
+    }
+    &:nth-child(9){
+      &:after{
+        @media screen and (min-width: $w-desktop) {
+          content: 'Все фото';
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(70, 70, 70, 0.7);
+          text-transform: uppercase;
+          font-family: Lato, sans-serif;
+          font-weight: $medium;
+          font-size: 16px;
+          line-height: 24px;
+          color: $white;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 50px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+.object-head{
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  @media screen and (min-width: $w-mobile) {
+    padding: 0 15px;
+    width: auto;
+    flex: 1 1 auto;
+  }
+  @media screen and (min-width: $w-tablet) {
+    padding: 0;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 700px;
+    flex: 0 0 auto;
+
+  }
+  &__img{
+    height: 240px;
+    width: 100%;
+    @include bg-img(cover);
+    @media screen and (min-width: $w-tablet) {
+      height: 328px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 370px;
+    }
+  }
+  &__inf{
+    padding-top: 15px;
+    padding-bottom: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray-e4;
+    @media screen and (min-width: $w-tablet) {
+      background-color: $white;
+      border-bottom: 0;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: -220px;
+
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 0;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  &__ss{
+    display: flex;
+    align-items: center;
+  }
+  &__ss-item{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $bordo-a9;
+    margin-left: 8px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $white;
+    text-align: center;
+    display: block;
+    @media screen and (min-width: $w-desktop) {
+      margin-left: 21px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 22px;
+    }
+  }
+  &__link{
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 18px;
+    line-height: 1;
+
+    a{
+      color: $bordo-a9;
+      border-bottom: 1px solid $bordo-a9;
+      &:hover{
+        border-color: transparent;
+      }
+    }
+  }
+}
+.all-news{
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 42px;
+  height: 42px;
+  padding: 0 30px;
+  margin: 0 auto;
+  color: $white;
+  text-transform: uppercase;
+  @media screen and (min-width: $w-tablet) {
+    font-size: 12px;
+    line-height: 32px;
+    height: 32px;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: skew(-20deg);
+    background-color: $bordo-c1;
+    transition: .5s;
+  }
+  span{
+    position: relative;
+    display: inline-block;
+  }
+}
+.news-more-all{
+  text-align: center;
+  @media screen and (min-width: $w-tablet) {
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    top: 12px;
+    right: 180px;
+  }
+}
+.news-more-container{
+  @media screen and (min-width: $w-tablet) {
+    position: relative;
+  }
+}
+.detail-video-bl{
+  @media screen and (min-width: $w-tablet) {
+    background-color: $white;
+    box-shadow: $shadow-gray;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    max-width: $w-desktop;
+    margin: 0 auto 75px;
+  }
+}
+.video{
+  padding-right: 30px;
+  padding-left: 30px;
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  &__ttl{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 25px;
+    line-height: 1;
+    color: $gray-4e;
+    margin-bottom: 30px;
+    text-align: center;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 25px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+}
+.video-full{
+  position: relative;
+  padding-bottom: 60px;
+  margin-bottom: 25px;
+  @media screen and (min-width: $w-tablet) {
+    width: 480px;
+    margin: 0 auto 40px;
+    padding-bottom: 0;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 720px;
+  }
+  &__item{
+    iframe{
+      display: block;
+      width: 100%;
+      height: 170px;
+      margin: 0 auto;
+      @media screen and (min-width: $w-tablet) {
+        height: 270px;
+        width: 480px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        width: 720px;
+        height: 400px;
+      }
+    }
+  }
+
+  .slick-arrow{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    background-image: url('images/arr-bordo.png');
+    @include bg-img(cover);
+    bottom: 0;
+    font-size: 0;
+    line-height: 0;
+    z-index: 1;
+    @media screen and (min-width: $w-tablet) {
+      bottom: auto;
+      top: 45%;
+    }
+    &.slick-prev{
+      transform: rotate(180deg);
+      left: 0;
+      @media screen and (min-width: $w-tablet) {
+        left: -90px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        left: -40px;
+      }
+    }
+    &.slick-next{
+      right: 0;
+      @media screen and (min-width: $w-tablet) {
+        right: -90px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        right: -40px;
+      }
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    @include uldev();
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+    button{
+      font-size: 0;
+      line-height: 0;
+      width: 7px;
+      height: 7px;
+      background-color: $bordo-a9;
+      border-radius: 50%;
+      margin: 10px;
+      transition: .5s;
+      border: 2px solid transparent;
+    }
+    .slick-active{
+      button{
+        width: 12px;
+        height: 12px;
+        margin: 7px;
+        background-color: $white;
+        border-color: $bordo-a9;
+      }
+    }
+  }
+}
+.video-prev{
+  display: none;
+  @media screen and (min-width: $w-tablet) {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 470px;
+  }
+  &__img{
+    width: 90px;
+    height: 50px;
+    @include bg-img(cover);
+    margin: 0 auto;
+    border: 2px solid transparent;
+    transition: .5s;
+    cursor: pointer;
+    @media screen and (min-width: $w-desktop) {
+      width: 140px;
+      height: 80px;
+    }
+  }
+  .slick-current{
+    .video-prev__img{
+      border: 2px solid $bordo-a9;
+    }
+  }
+  .slick-slide:focus{
+    outline: none;
+  }
+
 }
