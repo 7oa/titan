@@ -227,7 +227,7 @@ $(document).ready(function() {
     });
 
     //галлерея
-    $('.gallery a').simpleLightbox();
+    $('.detail-gallery a').simpleLightbox();
 
 });
 $(window).on('resize', function(){

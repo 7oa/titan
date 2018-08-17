@@ -1,5 +1,11 @@
 .page-detail{
   padding-top: 27px;
+  @media screen and (min-width: $w-tablet) {
+    padding-top: 22px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding-top: 58px;
+  }
 }
 .page-detail-ttl{
   padding-bottom: 30px;
@@ -7,15 +13,49 @@
     padding-bottom: 0;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
   .page-ttl{
     margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 35px;
+    }
   }
 }
+.detail-photo-bl{
+  @media screen and (min-width: $w-desktop) {
+    width: $w-desktop;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 54px;
+  }
+}
+.detail-content-bl{
+  margin-bottom: 60px;
+  @media screen and (min-width: $w-tablet) {
+    margin-bottom: 37px;
+  }
+}
+.detail-similar-bl{
+  padding-bottom: 39px;
+}
+
 .back-to{
   display: inline-block;
   height: 32px;
   position: relative;
+  @media screen and (min-width: $w-tablet) {
+    height: 27px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    height: 32px;
+  }
+
   &:before{
     content: '';
     display: block;
@@ -35,14 +75,27 @@
     font-weight: $medium;
     font-size: 12px;
     line-height: 32px;
+    height: 32px;
     padding: 0 23px;
     text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 27px;
+      font-size: 10px;
+      height: 27px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 12px;
+      line-height: 32px;
+      height: 32px;
+    }
   }
 }
 .detail-content{
   @media screen and (min-width: $w-tablet) {
     display: flex;
-
+    align-items: flex-start;
   }
 }
 .detail-txt{
@@ -59,9 +112,10 @@
   @media screen and (min-width: $w-desktop) {
     font-size: 16px;
     line-height: 24px;
+    padding-top: 27px;
   }
   p{
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
   a{
     color: $bordo-a9;
@@ -75,8 +129,8 @@
   background-color: $white;
   box-shadow: $shadow-gray;
   width: 100%;
-  margin-bottom: 80px;
-  padding: 45px 10px 40px;
+  margin-bottom: 35px;
+  padding: 30px 10px 20px;
   box-sizing: border-box;
   @media screen and (min-width: $w-tablet) {
     width: 310px;
@@ -87,6 +141,8 @@
   }
   @media screen and (min-width: $w-desktop) {
     width: 460px;
+    padding-top: 44px;
+    padding-bottom: 30px;
   }
   &__ttl{
     font-family: Gilroy, sans-serif;
@@ -127,7 +183,7 @@
     height: 200px;
     width: 100%;
     @media screen and (min-width: $w-tablet) {
-      height: 300px;
+      height: 287px;
     }
     @media screen and (min-width: $w-desktop) {
       height: 460px;
@@ -137,7 +193,7 @@
     position: relative;
     width: 100%;
     background-color: $bordo-a9;
-    padding: 40px 30px;
+    padding: 35px 30px 20px;
     box-sizing: border-box;
     background-image: url('images/bg3.png');
     background-repeat: repeat;
@@ -149,17 +205,22 @@
       right: 0;
       top: 0;
       bottom: 0;
+      padding: 39px 38px 10px;
     }
     @media screen and (min-width: $w-desktop) {
       width: 550px;
-
+      padding: 59px 80px 10px;
     }
   }
   &__inf-bl{
     color: $white;
-  }
-  &__inf-bl{
     margin-bottom: 10px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 25px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 37px;
+    }
   }
   &__inf-ttl{
     font-family: Gilroy, sans-serif;
@@ -180,7 +241,7 @@
     font-weight: $regular;
     font-size: 16px;
     line-height: 30px;
-    padding-left: 10px;
+    padding-left: 17px;
     @media screen and (min-width: $w-tablet) {
       font-size: 14px;
       line-height: 24px;
@@ -196,15 +257,24 @@
   @media screen and (min-width: $w-tablet) {
     position: relative;
     display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 700px;
+    flex: 0 0 auto;
   }
   &__img{
-    width: 100%;
-    height: 250px;
-    @include bg-img(cover);
+  width: 100%;
+  height: 250px;
+  @include bg-img(cover);
     @media screen and (min-width: $w-tablet) {
       height: 330px;
-      width: 70%;
+      width: 65%;
       flex: 0 0 auto;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 480px;
+      height: 460px;
     }
   }
   &__inf{
@@ -213,6 +283,10 @@
     @media screen and (min-width: $w-tablet) {
       flex: 1 1 auto;
       position: relative;
+      padding: 25px 27px 0;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 40px 30px 0;
     }
   }
   &__btn{
@@ -221,14 +295,23 @@
     font-family: Gilroy, sans-serif;
     font-weight: $extra-bold;
     font-size: 13px;
-    line-height: 40px;
+    line-height: 49px;
     text-transform: uppercase;
     color: $white;
+    letter-spacing: 1.5px;
     @media screen and (min-width: $w-tablet) {
       position: absolute;
-      bottom: 30px;
-      left: -50px;
-
+      bottom: 27px;
+      left: -83px;
+      border: 4px solid #fff;
+      line-height: 47px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      border-width: 5px;
+      font-size: 16px;
+      line-height: 56px;
+      padding: 0 45px;
+      width: auto;
     }
   }
   &__inf-list{
@@ -242,18 +325,34 @@
     font-family: Lato, sans-serif;
     font-weight: $medium;
     font-size: 15px;
-    line-height: 19px;
+    line-height: 20px;
     text-transform: uppercase;
     color: $bordo-a9;
     width: 50%;
     flex: 0 0 auto;
     order: 2;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 35px;
+    }
   }
   &__inf-bl{
     margin-bottom: 13px;
     width: 50%;
     flex: 0 0 auto;
     order: 2;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 18px;
+    }
     &:nth-child(2){
       order: 1;
     }
@@ -262,8 +361,14 @@
     font-family: Gilroy, sans-serif;
     font-weight: $extra-bold;
     font-size: 25px;
-    line-height: 25px;
+    line-height: 1;
     color: $bordo-a9;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 27px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+    }
     .from{
       color: $gray-ce;
       font-size: 18px;
@@ -279,17 +384,141 @@
   }
 }
 .detail-gallery{
+  @media screen and (min-width: $w-desktop) {
+    width: 480px;
+    flex: 0 0 auto;
+  }
   &__list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 30px;
+    @media screen and (min-width: $w-tablet) {
+      padding: 10px 10px 23px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      padding: 0;
+    }
   }
   &__item{
-    width: 145px;
+    width: 49%;
     height: 145px;
     @include bg-img(cover);
     display: block;
     margin-bottom: 15px;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+      width: 16%;
+      height: 108px;
+      margin-bottom: 5px;
+      margin-right: 0.3%;
+      margin-left: 0.3%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 140px;
+      height: 140px;
+      margin-right: 0;
+      margin-left: 19px;
+      margin-bottom: 19px;
+    }
+    &:nth-child(n+7){
+      display: none;
+      @media screen and (min-width: $w-tablet) {
+        display: block;
+      }
+    }
+    &:nth-child(6){
+      &:after{
+        content: 'Все фото';
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(146,4,44,0.47);
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        font-weight: $medium;
+        font-size: 19px;
+        line-height: 24px;
+        color: $white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        box-sizing: border-box;
+        @media screen and (min-width: $w-tablet) {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(n+13){
+      @media screen and (min-width: $w-tablet) {
+        display: none;
+      }
+    }
+    &:nth-child(12){
+      &:after{
+        @media screen and (min-width: $w-tablet) {
+          content: 'Все фото';
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(146, 4, 44, 0.47);
+          text-transform: uppercase;
+          font-family: Lato, sans-serif;
+          font-weight: $medium;
+          font-size: 19px;
+          line-height: 24px;
+          color: $white;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 50px;
+          box-sizing: border-box;
+        }
+        @media screen and (min-width: $w-desktop) {
+          display: none;
+        }
+      }
+    }
+    &:nth-child(n+10){
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
+    }
+    &:nth-child(9){
+      &:after{
+        @media screen and (min-width: $w-desktop) {
+          content: 'Все фото';
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(70, 70, 70, 0.7);
+          text-transform: uppercase;
+          font-family: Lato, sans-serif;
+          font-weight: $medium;
+          font-size: 16px;
+          line-height: 24px;
+          color: $white;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 50px;
+          box-sizing: border-box;
+        }
+      }
+    }
   }
 }

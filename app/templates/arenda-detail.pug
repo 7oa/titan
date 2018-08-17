@@ -38,15 +38,12 @@ block content
 								._inf-bl
 									._inf-sz 7<span class="from">/12</span>
 									._inf-lb этаж
-							button._btn(type="button") Отправить заявку
+							button._btn(type="button" data-izimodal-open="#order") Отправить заявку
 					.detail-gallery
 						._list
-							- for(var i=0;i<10;i++)
-								a._item(href="https://picsum.photos/300"+i+"" style="background-image:url('https://picsum.photos/300"+i+"')")
-					.gallery.
-						<a href="images/index-bg1.jpg"><img src="images/index-bg1.jpg" alt="" title="1" style="width:100px;"/></a>
-						<a href="https://picsum.photos/301"><img src="https://picsum.photos/301" alt="" title="2"/></a>
-						<a href="https://picsum.photos/301"><img src="https://picsum.photos/301" alt="" title="3"/></a>
+							- for(var i=0;i<6;i++)
+								a._item(href="images/TEMP/img1.jpg" style="background-image:url('images/TEMP/img1.jpg')")
+								a._item(href="images/TEMP/img2.jpg" style="background-image:url('images/TEMP/img2.jpg')")
 				.detail-map-bl
 					._map
 						.map#map
@@ -91,5 +88,5 @@ block content
 							- for (var i=0; i<9; i++)
 								._item
 									include blocks/_object
-
+			include popups/_order
 	//end workarea
