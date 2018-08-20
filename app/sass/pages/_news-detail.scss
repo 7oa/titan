@@ -1,0 +1,361 @@
+.news-detail{
+  &__detail-img{
+    width: 100%;
+    height: 240px;
+    @include bg-img(cover);
+    @media screen and (min-width: $w-tablet) {
+      height: 445px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 460px;
+    }
+  }
+  &__text{
+    color: $gray-8c;
+    font-family: Lato, sans-serif;
+    font-weight: $medium;
+    font-size: 14px;
+    line-height: 23px;
+    a{
+      color: $bordo-a9;
+      border-bottom: 1px solid $bordo-a9;
+      &:hover{
+        border-color: transparent;
+      }
+    }
+    p{
+      margin-bottom: 30px;
+    }
+    quote{
+      background-color: $white;
+      box-shadow: $shadow-gray;
+      padding: 89px 30px 40px;
+      background-image: url('images/quote.png');
+      background-repeat: no-repeat;
+      background-position: 30px 35px;
+      background-size: 61px 39px;
+      color: $gray-41;
+      display: block;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 25px;
+      @media screen and (min-width: $w-tablet) {
+        background-image: url('images/quote-red.png');
+        background-size: 45px 30px;
+        background-position: 35px 50px;
+        padding: 100px 35px 50px;
+        font-size: 15px;
+        line-height: 30px;
+      }
+      @media screen and (min-width: $w-desktop) {
+        background-size: 34px 22px;
+        background-position: 25px 47px;
+        padding: 45px 80px 40px 80px;
+        font-weight: $regular;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__container{
+    margin-bottom: 80px;
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+    }
+  }
+  &__date{
+    color: $gray-8c;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1;
+    font-family: Lato, sans-serif;
+    font-weight: $bold;
+    @media screen and (min-width: $w-desktop) {
+      background-image: url("images/calendar-gray.png");
+      background-size: 20px 17px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-left: 32px;
+      line-height: 33px;
+      letter-spacing: 1.5px;
+    }
+  }
+  &__obj-list{
+    @media screen and (min-width: $w-tablet) {
+      margin-left: 10px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      margin-left: 20px;
+    }
+  }
+  &__obj-ttl{
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 25px;
+    line-height: 1;
+    margin-bottom: 30px;
+    @media screen and (min-width: $w-tablet) {
+      display: none;
+    }
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      font-size: 30px;
+    }
+  }
+  &__share-ttl{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      text-transform: uppercase;
+      font-size: 11px;
+      line-height: 1;
+      font-family: Lato, sans-serif;
+      font-weight: $bold;
+      margin-right: 15px;
+      color: $gray-8c;
+      letter-spacing: 1.2px;
+    }
+  }
+  &__share{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__panel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0 20px;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 11px;
+    }
+  }
+  &__head{
+    margin-bottom: 23px;
+    border-bottom: 1px solid $gray-e4;
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 35px;
+    }
+  }
+  &__sidebar{
+    @media screen and (min-width: $w-tablet) {
+      width: 200px;
+      flex: 0 0 auto;
+      margin-left: 30px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 480px;
+      margin-left: 80px;
+    }
+  }
+  &__body{
+    @media screen and (min-width: $w-tablet) {
+      flex: 1 1 auto;
+    }
+  }
+  &__gallery{
+    @media screen and (min-width: $w-desktop) {
+      margin-bottom: 53px;
+    }
+  }
+}
+.obj-prev{
+  display: block;
+  margin-bottom: 15px;
+  border: 1px solid $bordo-a9;
+  background-color: $white;
+  padding: 12px;
+  @media screen and (min-width: $w-tablet) {
+    border: none;
+    box-shadow: $shadow-gray;
+    margin-bottom: 25px;
+    padding: 15px 0 0 10px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    padding: 20px 0 15px 10px;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__img{
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      @include bg-img(cover);
+      width: 100%;
+      height: 90px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      height: 70px;
+      margin-bottom: 0;
+    }
+
+  }
+  &__ttl{
+    text-align: center;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 15px;
+    line-height: 1;
+    color: $bordo-a9;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $w-tablet) {
+      text-align: left;
+      font-size: 11px;
+      border-bottom: 1px solid $gray-e4;
+      padding-bottom: 6px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+  }
+  &__l{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 140px;
+      margin-right: 10px;
+      flex: 0 0 auto;
+    }
+  }
+  &__r{
+    @media screen and (min-width: $w-desktop) {
+      flex: 1 1 auto;
+    }
+  }
+  &__addr{
+    display: none;
+    @media screen and (min-width: $w-tablet) {
+      display: block;
+      color: $gray-41;
+      font-size: 8px;
+      line-height: 10px;
+      font-family: Lato-Heavy, sans-serif;
+      padding: 7px 0 10px;
+      text-transform: uppercase;
+      background-image: url('images/pin2.png');
+      background-repeat: no-repeat;
+      background-position: left 6px;
+      padding-left: 20px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 10px;
+      line-height: 16px;
+      padding-top: 13px;
+      padding-bottom: 0;
+      background-position: left 13px;
+    }
+  }
+}
+.news-detail-gallery{
+  @media screen and (min-width: $w-tablet) {
+    width: 100%;
+  }
+  @media screen and (min-width: $w-desktop) {
+
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+  }
+  &__item{
+    width: 46%;
+    height: 145px;
+    @include bg-img(cover);
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    margin-left: 2%;
+    position: relative;
+    @media screen and (min-width: $w-tablet) {
+      height: 90px;
+      width: 90px;
+      margin-left: 10px;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 140px;
+      height: 140px;
+      margin-right: 0;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    &:nth-child(n+7){
+      display: none;
+      @media screen and (min-width: $w-desktop) {
+        display: block;
+      }
+    }
+    &:nth-child(6){
+      &:after{
+        content: 'Все фото';
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(146,4,44,0.47);
+        text-transform: uppercase;
+        font-family: Lato, sans-serif;
+        font-weight: $medium;
+        font-size: 15px;
+        line-height: 19px;
+        color: $white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+        @media screen and (min-width: $w-desktop) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(n+10){
+      @media screen and (min-width: $w-desktop) {
+        display: none;
+      }
+    }
+    &:nth-child(9){
+      &:after{
+        @media screen and (min-width: $w-desktop) {
+          content: 'Все фото';
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(70, 70, 70, 0.7);
+          text-transform: uppercase;
+          font-family: Lato, sans-serif;
+          font-weight: $medium;
+          font-size: 16px;
+          line-height: 24px;
+          color: $white;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 50px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
