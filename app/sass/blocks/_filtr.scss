@@ -14,6 +14,7 @@
   @media screen and (min-width: $w-desktop) {
     display: block !important;
     position: unset;
+    overflow: unset;
   }
   &__line1{
     margin-bottom: 30px;
@@ -285,11 +286,11 @@
     border: 1px solid $gray-ce;
     box-shadow: $shadow-gray;
     z-index: 3;
-    padding: 0 25px;
+    padding: 15px 25px;
     display: none;
     @media screen and (min-width: $w-desktop) {
       top: 50px;
-      padding: 0 30px;
+      padding: 15px 30px;
       width: 400px;
       right: 0;
       left: auto;
@@ -323,6 +324,9 @@
     &_all{
       color: $gray-23;
     }
+    &:last-of-type{
+      border-bottom: none;
+    }
   }
   &:after{
     content: '';
@@ -334,13 +338,19 @@
     background-repeat: no-repeat;
     display: block;
     width: 11px;
-    height: 11px;
+    height: 6px;
+    transition: .5s;
     @media screen and (min-width: $w-tablet) {
       top: 17px;
     }
     @media screen and (min-width: $w-desktop) {
       top: 20px;
       right: 20px;
+    }
+  }
+  &.open{
+    &:after{
+      transform: rotate(-180deg);
     }
   }
   &__checkbox {

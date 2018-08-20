@@ -75,6 +75,7 @@
   color: $white;
   border: 1px solid $gray-ce;
   letter-spacing: 1.2px;
+  transition: .5s;
   @media screen and (min-width: $w-tablet) {
     width: 216px;
     font-size: 11px;
@@ -84,5 +85,11 @@
     width: 100%;
     font-size: 14px;
     line-height: 48px;
+  }
+  &:hover{
+    @media screen and (min-width: $w-desktop) {
+      color: $bordo-de;
+      border-color: $bordo-de;
+    }
   }
 }

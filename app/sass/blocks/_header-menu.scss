@@ -24,6 +24,7 @@
     font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: .5s;
     @media screen and (min-width: $w-tablet) {
       color: $gray-23;
       font-size: 16px;
@@ -43,6 +44,7 @@
         background-repeat: no-repeat;
         background-size: 15px 9px;
         margin-left: 5px;
+        transition: .5s;
         @media screen and (min-width: $w-tablet) {
           background-image: url('images/drop-bordo.png');
           width: 10px;
@@ -56,6 +58,15 @@
           margin-left: 7px;
         }
       }
+      &.open{
+        &:after{
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    &:hover,
+    &_active{
+      color: $bordo-a9;
     }
   }
   &__child-w{
@@ -105,7 +116,7 @@
     @include uldev();
   }
   &__child-li{
-    margin-bottom: 5px;
+    margin-bottom: 12px;
     @media screen and (min-width: $w-desktop) {
       margin-bottom: 19px;
     }

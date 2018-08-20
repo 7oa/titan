@@ -80,11 +80,11 @@
     border: 1px solid $gray-ce;
     box-shadow: $shadow-gray;
     z-index: 3;
-    padding: 0 25px;
+    padding: 15px 25px;
     display: none;
     @media screen and (min-width: $w-desktop) {
       top: 70px;
-      padding: 0 30px;
+      padding: 15px 30px;
     }
     &::-webkit-scrollbar{
       width: 4px;
@@ -115,6 +115,9 @@
     &_all{
       color: $gray-23;
     }
+    &:last-of-type{
+      border-bottom: none;
+    }
   }
   &:after{
     content: '';
@@ -126,13 +129,19 @@
     background-repeat: no-repeat;
     display: block;
     width: 11px;
-    height: 11px;
+    height: 6px;
+    transition: .5s;
     @media screen and (min-width: $w-tablet) {
       top: 17px;
     }
     @media screen and (min-width: $w-desktop) {
       top: 27px;
       right: 28px;
+    }
+  }
+  &.open{
+    &:after{
+      transform: rotate(-180deg);
     }
   }
 }

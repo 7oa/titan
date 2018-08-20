@@ -60,7 +60,7 @@ $(document).ready(function() {
 
     //выпадающее меню
     $('.js-menu-link').click(function () {
-        $(this).next().slideToggle();
+        $(this).toggleClass('open').next().slideToggle();
         return false;
     });
 
@@ -229,8 +229,7 @@ $(document).ready(function() {
 
     //календарь
     $('.js-calendar').on('click',function(){
-        var dp = $('.js-calendar-input')
-            .datepicker({
+        var dp = $('.js-calendar-input').datepicker({
                 view: 'months',
                 minView: 'months',
                 autoClose: true,
@@ -314,4 +313,23 @@ $(document).mouseup(function (e){
             filtr.removeClass('open').children('.select__list').slideUp();
         }, 50);
     }
+
+    var childMenu = $('.js-menu-child');
+    var menuLink = $('.js-menu-link');
+    if (!childMenu.is(e.target) && !menuLink.is(e.target)
+        && childMenu.has(e.target).length === 0 && menuLink.has(e.target).length === 0) {
+            if(menuLink.hasClass('open')){
+            childMenu.slideUp().prev('.js-menu-link').removeClass('open');
+        }
+    }
+
+    var filtr = $('.select-obj.open');
+    if (!filtr.is(e.target)
+        && filtr.has(e.target).length === 0) {
+        setTimeout(function () {
+            filtr.removeClass('open').children('.select-obj__list').slideUp();
+        }, 50);
+    }
+
+
 });
