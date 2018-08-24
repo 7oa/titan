@@ -103,6 +103,7 @@
     display: block;
     text-transform: uppercase;
     padding: 13px 0;
+    cursor: pointer;
     @media screen and (min-width: $w-tablet) {
       font-size: 11px;
       line-height: 11px;

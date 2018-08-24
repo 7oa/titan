@@ -129,14 +129,21 @@
         font-size: 18px;
         line-height: 20px;
       }
+      &.moveUp{
+        top: -10px;
+        font-size: 10px;
+        color: $gray-8c;
+        span{
+          font-size: 16px;
+        }
+      }
     }
     .form__recaptcha{
-      @media screen and (min-width: $w-tablet) {
-        height: 60px;
-      }
-      @media screen and (min-width: $w-desktop) {
-        height: auto;
-      }
+      width: auto;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
     }
   }
 }

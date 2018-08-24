@@ -186,7 +186,7 @@
   &__img{
     @media screen and (min-width: $w-tablet) {
       display: block;
-      @include bg-img(cover);
+      @include bg-img(contain);
       width: 100%;
       height: 90px;
       margin-bottom: 20px;

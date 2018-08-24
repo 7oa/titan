@@ -151,7 +151,7 @@ $(document).ready(function() {
         ]
     });
 
-    //слайдер yjdjcnb
+    //слайдер news-more
     $('.news-more').slick({
         dots: false,
         arrows: true,
@@ -211,32 +211,6 @@ $(document).ready(function() {
             else formModal.iziModal('setFullscreen', true);
             //else formModal.iziModal('setWidth', '100%');
         }
-    });
-
-    //form
-    if($('.js-movePh').length>0){
-        $('.js-movePh').each(function() {
-            if($(this).val()) $(this).next('span').addClass('moveUp');
-        });
-        $('.js-movePh').on('focus', function() {
-            $(this).next('span').addClass('moveUp');
-        });
-        $('.js-movePh').on('focusout', function() {
-            if(!$(this).val()) $(this).next('span').removeClass('moveUp');
-        });
-        $("#phone").mask("+7 999 999 99 99");
-    }
-
-    //календарь
-    $('.js-calendar').on('click',function(){
-        var dp = $('.js-calendar-input').datepicker({
-                view: 'months',
-                minView: 'months',
-                autoClose: true,
-                position: "bottom right"
-            })
-            .data('datepicker');
-        dp.show();
     });
 
     $('.js-select').click(function(){

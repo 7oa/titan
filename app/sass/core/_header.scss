@@ -190,6 +190,9 @@
   background-repeat: no-repeat;
   background-position-y: center;
   letter-spacing: 2px;
+  a{
+    color: $gray-fe;
+  }
   &_tel{
     background-image: url('images/phone-white.png');
     background-position-x: 4px;
@@ -230,5 +233,8 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+  }
+  a{
+    color: $gray-23;
   }
 }

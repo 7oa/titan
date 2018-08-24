@@ -3,7 +3,7 @@
 
 mixin navItem(url, name, parent, current)
     li.header-menu__items
-        a.header-menu__links(class=name==current ? 'header-menu__links_active' : '',, class=parent=='y' ? 'header-menu__links_parent js-menu-link' : '', href=url, title=name)= name
+        a.header-menu__links(class=name==current ? 'header-menu__links_active' : '', class=parent=='y' ? 'header-menu__links_parent js-menu-link' : '', href=url, title=name)= name
         if parent == 'y'
             .header-menu__child-w.js-menu-child
                 .header-menu__child-cnt
