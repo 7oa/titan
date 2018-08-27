@@ -1,0 +1,10 @@
+.page-content{
+  padding: 60px 0;
+  a{
+    color: $bordo-a9;
+    border-bottom: 1px solid $bordo-a9;
+    &:hover{
+      border-color: transparent;
+    }
+  }
+}
