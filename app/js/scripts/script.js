@@ -297,11 +297,11 @@ $(document).mouseup(function (e){
         }
     }
 
-    var filtr = $('.select-obj.open');
-    if (!filtr.is(e.target)
-        && filtr.has(e.target).length === 0) {
+    var filtr2 = $('.select-obj.open');
+    if (!filtr2.is(e.target)
+        && filtr2.has(e.target).length === 0) {
         setTimeout(function () {
-            filtr.removeClass('open').children('.select-obj__list').slideUp();
+            filtr2.removeClass('open').children('.select-obj__list').slideUp();
         }, 50);
     }
 

@@ -21,6 +21,7 @@
     padding-bottom: 5px;
   }
   &__item{
+    cursor: pointer;
     @media screen and (min-width: $w-desktop) {
       font-family: Lato, sans-serif;
       font-weight: $medium;
