@@ -14,6 +14,7 @@ html
         include _scripts
     body
         .wrapper
+
             .content
                 - if (activeMenu == 'Главная')
                     include _header-index
@@ -24,6 +25,7 @@ html
                 block content
 
                 include ../popups/_feedback
+                include ../popups/_cookies
             //end content
 
             include _footer

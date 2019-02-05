@@ -51,10 +51,6 @@ gulp.task('sass', function() {
                 console.log( error );
             } )
         )
-        .pipe(sass({
-            // sourceComments: 'map'
-        }))
-        //        .pipe(prefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(cssmin())
@@ -130,11 +126,6 @@ gulp.task('watch', function() {
     watch(['./app/sass/fonts/**/*.*'], function(event, cb) {
         gulp.start('fonts');
     });
-    // gulp.watch(['], ['pug']);
-    // gulp.watch(['./app/sass/**/*.scss'], ['sass']);
-    // gulp.watch(['./app/js/**/*.js'], ['js']);
-    // gulp.watch(['./app/images/**/*.*'], ['image']);
-    // gulp.watch(['./app/sass/fonts/**/*.*'], ['fonts']);
 });
 
 // Запуск сервера c лайврелоадом

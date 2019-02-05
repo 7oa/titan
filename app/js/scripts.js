@@ -6,9 +6,10 @@
 //= plugins/_iziModal.min.js
 //= plugins/_jquery.maskedinput.min.js
 //= plugins/_jquery-ui.min.js
+//= plugins/_jquery.ui.touch-punch.min.js
 //= plugins/_datepicker.min.js
 //= plugins/_simple-lightbox.min.js
+//= plugins/_jquery.cookie.js
 
 //Scripts
 //= scripts/script.js
-//

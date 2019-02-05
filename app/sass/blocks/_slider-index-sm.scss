@@ -12,6 +12,7 @@
   }
   &__item{
     background-color: $white;
+    position: relative;
   }
   &__ttl{
     color: $gray-41;
@@ -48,8 +49,17 @@
       line-height: 36px;
     }
   }
+  &__lnk{
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
   &__cnt{
     padding: 25px 30px 90px;
+    display: block;
     @media screen and (min-width: $w-tablet) {
       padding-bottom: 17px;
       height: 207px;

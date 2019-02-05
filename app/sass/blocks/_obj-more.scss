@@ -5,7 +5,12 @@
     padding-bottom: 70px;
   }
   &__item{
-
+    &:focus{
+      outline: none;
+    }
+  }
+  .slick-track{
+    margin-left: 0;
   }
   .slick-arrow{
     position: absolute;

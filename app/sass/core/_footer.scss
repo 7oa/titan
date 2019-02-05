@@ -167,14 +167,14 @@
     background-repeat: no-repeat;
     letter-spacing: 0.3px;
     @media screen and (min-width: $w-tablet) {
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: 14px;
       padding-left: 40px;
       letter-spacing: 0;
     }
     @media screen and (min-width: 960px) {
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 22px;
       padding-left: 40px;
     }
     &_addr{
@@ -186,6 +186,7 @@
       }
       @media screen and (min-width: 960px) {
         background-size: 12px 15px;
+        background-position-y: 4px;
       }
     }
     &_tel{
@@ -197,6 +198,7 @@
       }
       @media screen and (min-width: 960px) {
         background-size: 9px 16px;
+        background-position-y: 4px;
       }
     }
     &_email{
@@ -205,9 +207,11 @@
       background-position-y: 2px;
       @media screen and (min-width: $w-tablet) {
         background-size: 17px 11px;
+        background-position-y: 5px;
       }
       @media screen and (min-width: 960px) {
         background-size: 18px 11px;
+        background-position-y: 7px;
       }
     }
     a{
@@ -264,6 +268,7 @@
   font-size: 22px;
   line-height: 35px;
   color: $gray-41;
+  transition: .5s;
   @media screen and (min-width: $w-tablet) {
     width: 33px;
     height: 33px;
@@ -278,6 +283,15 @@
   }
   &:last-of-type{
     margin-right: 0;
+  }
+  &.facebook-f:hover{
+    background-color: #3b5998;
+  }
+  &.vk:hover{
+    background-color: #597da3;
+  }
+  &.instagram:hover{
+    background-color: #8a3ab9;
   }
 }
 .footer-menu{

@@ -20,6 +20,7 @@ function objSlider(){
                 speed: 300,
                 dragHandle: 1,
                 clickBar: 1,
+                touchDragging: true,
 
                 prevPage: wrap.find('.prevPage'),
                 nextPage: wrap.find('.nextPage')
@@ -196,6 +197,35 @@ $(document).ready(function() {
 
     objSlider();
 
+
+
+    //popup куки
+    /*var cookiesModal =  $('#cookies').iziModal({
+        radius: 0,
+        width: '100%',
+        bottom: 0,
+        overlay: false,
+        transitionIn: 'fadeInUp',
+        transitionOut: 'fadeOutDown',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut',
+        zindex: '999',
+        bodyOverflow: false
+    });*/
+
+    //Использование куков
+    if($.cookie('use_cookie')!='yes'){
+        //cookiesModal.iziModal('open');
+        $('#cookies').show();
+    }
+    $(document).on('click','.cookies__button',function () {
+        $.cookie('use_cookie', 'yes', {
+            expires: 365,
+            path: '/'
+        });
+        $('#cookies').fadeOut();
+    });
+
     //feedback
     var formModal =  $('.modal-form').iziModal({
         radius: 0,
@@ -228,7 +258,8 @@ $(document).ready(function() {
     });
 
     //галлерея
-    $('.photo-gallery a').simpleLightbox();
+    $('.photo-gallery').simpleLightbox();
+    $('.plan-gallery').simpleLightbox();
 
     //тэги
     $('.js-tag').click(function(){
@@ -264,14 +295,11 @@ $(document).ready(function() {
         arrows: false,
         centerMode: false,
         focusOnSelect: true,
-        infinite: true,
-        responsive: [
-            {
-                breakpoint: 680,
-                settings: 'unslick'
-            }
-        ]
+        infinite: true
     });
+
+    //значок композитного сайта в футер
+    $('.bx-composite-btn').parent().appendTo( $('.footer') );
 
 });
 $(window).on('resize', function(){

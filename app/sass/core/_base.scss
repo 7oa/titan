@@ -19,6 +19,7 @@ body {
 }
 a{
   text-decoration: none;
+  color: $bordo-a9;
 }
 input:focus,
 textarea:focus,
@@ -230,6 +231,20 @@ button{
       margin-top: 23px;
     }
   }
+  h1{
+    color: $gray-41;
+    font-family: Gilroy, sans-serif;
+    font-weight: $extra-bold;
+    font-size: 25px;
+    line-height: 31px;
+    @media screen and (min-width: $w-tablet) {
+      line-height: 41px;
+    }
+    @media screen and (min-width: $w-desktop) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
 }
 .page-topline{
   @media screen and (min-width: $w-tablet) {
@@ -239,6 +254,12 @@ button{
   }
   @media screen and (min-width: $w-desktop) {
     justify-content: flex-start;
+  }
+  &_smi{
+    @media screen and (min-width: $w-desktop) {
+      justify-content: space-between;
+      max-width: 1100px;
+    }
   }
 }
 .page-filtr{
@@ -287,4 +308,41 @@ button{
 }
 .rub{
   font-family: PTRoubleSans;
+}
+.obj-video{
+  width: 100%;
+  height: 170px;
+  position: relative;
+  @media screen and (min-width: $w-tablet) {
+    height: 270px;
+    width: 480px;
+  }
+  @media screen and (min-width: $w-desktop) {
+    width: 720px;
+    height: 400px;
+  }
+  &__player{
+    width: 100%;
+    height: 100%;
+    @include bg-img(cover);
+  }
+  &__play{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 35%;
+    margin: 0 auto;
+    background-image: url('images/play.png');
+    @include bg-img(contain);
+    width: 80px;
+    height: 60px;
+    opacity: .9;
+    cursor: pointer;
+    @media screen and (min-width: $w-tablet) {
+      top: 40%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      top: 45%;
+    }
+  }
 }

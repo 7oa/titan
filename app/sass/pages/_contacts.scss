@@ -99,9 +99,11 @@
     .form__input {
       @media screen and (min-width: $w-tablet) {
         line-height: 24px;
+        height: 24px;
       }
       @media screen and (min-width: $w-desktop) {
         line-height: 37px;
+        height: 37px;
       }
     }
     .form__row_textarea{
@@ -206,5 +208,8 @@
       font-size: 22px;
       line-height: 30px;
     }
+  }
+  a{
+    color: $gray-4e;
   }
 }

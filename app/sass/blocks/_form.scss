@@ -100,9 +100,11 @@
     padding: 0 15px;
     @media screen and (min-width: $w-tablet) {
       line-height: 31px;
+      height: 31px;
     }
     @media screen and (min-width: $w-desktop) {
       line-height: 41px;
+      height: 41px;
     }
   }
   &__textarea{

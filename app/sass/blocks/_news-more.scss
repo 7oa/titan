@@ -1,6 +1,9 @@
 .news-more{
   position: relative;
   padding-bottom: 50px;
+  .slick-track{
+    margin-left: 0;
+  }
   .slick-arrow{
     position: absolute;
     width: 20px;

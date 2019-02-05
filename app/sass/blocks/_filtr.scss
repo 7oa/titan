@@ -127,6 +127,7 @@
   }
   &__range-val{
     display: flex;
+    cursor: default;
   }
   &__range-ttl{
     font-family: Gilroy, sans-serif;
@@ -160,6 +161,15 @@
     margin-right: 10px;
   }
   &__submit{
+    width: 100%;
+    @media screen and (min-width: $w-tablet) {
+      width: 48%;
+    }
+    @media screen and (min-width: $w-desktop) {
+      width: 20%;
+    }
+  }
+  &__submit-btn{
     background-color: $bordo-a9;
     color: $white;
     font-family: Gilroy, sans-serif;
@@ -172,12 +182,7 @@
     letter-spacing: 1.5px;
     transition: .5s;
     border: none;
-    @media screen and (min-width: $w-tablet) {
-      width: 48%;
-    }
-    @media screen and (min-width: $w-desktop) {
-      width: 20%;
-    }
+
     &:hover{
       @media screen and (min-width: $w-desktop) {
         box-shadow: $shadow-bordo;
@@ -188,6 +193,15 @@
         background-color: $bordo-de;
       }
     }
+  }
+  &__reset-btn{
+    text-align: center;
+    color: $bordo-a9;
+    text-decoration: underline;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
   }
   &__select-dt{
     display: none;
@@ -293,8 +307,8 @@
       top: 50px;
       padding: 15px 30px;
       width: 400px;
-      right: 0;
-      left: auto;
+      right: auto;
+      left: 0;
     }
     &::-webkit-scrollbar{
       width: 4px;

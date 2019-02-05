@@ -1,0 +1,47 @@
+.cookies{
+  background-color: $bordo-a9;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+  &__wrapper{
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media screen and (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__text{
+    color: $white;
+    font-weight: $medium;
+    margin-bottom: 10px;
+    @media screen and (min-width: 800px) {
+      margin-bottom: 0;
+    }
+    a{
+      color: $white;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    p{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__button{
+    background-color: $white;
+    font-family: Gilroy,sans-serif;
+    font-weight: $extra-bold;
+    padding: 13px 30px;
+
+  }
+}
